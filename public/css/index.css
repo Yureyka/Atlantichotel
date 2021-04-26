@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "Merriweather";
+  font-style: italic;
+  font-weight: 300;
+  src: local(""), url(/fonts/merriweather-v22-latin_cyrillic-300italic.woff2?50ae39b4695094380aeb1ea124d21337) format("woff2"), url(/fonts/merriweather-v22-latin_cyrillic-300italic.woff?b657b4dff6b7f43d4bde187e2a47cc42) format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url(/fonts/merriweather-v22-latin_cyrillic-regular.woff2?e26dc63803feab3692a8348725b05ea7) format("woff2"), url(/fonts/merriweather-v22-latin_cyrillic-regular.woff?d90db89813fa3b61d39336386c49e3f1) format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Merriweather";
+  font-style: italic;
+  font-weight: 700;
+  src: local(""), url(/fonts/merriweather-v22-latin_cyrillic-700italic.woff2?73c12c48bb75ce75c2dad4e0a25e8427) format("woff2"), url(/fonts/merriweather-v22-latin_cyrillic-700italic.woff?afce55cbfda140587fc10982420a8f14) format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url(/fonts/roboto-v27-latin_cyrillic-regular.woff2?91f689ac38236365183d3c2dfd4d4976) format("woff2"), url(/fonts/roboto-v27-latin_cyrillic-regular.woff?90fc8764675b01c9cc054a3679d3a600) format("woff");
+  font-display: swap;
+}
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}

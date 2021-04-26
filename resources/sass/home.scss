@@ -1,0 +1,60 @@
+@import "variables";
+@import "nav";
+
+.header {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../public/images/main-screen.jpg');
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+
+    &__content {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #fff;
+    }
+
+    &__title {
+        font-size: 80px;
+        font-weight: 400;
+        margin: 20px 0;
+    }
+
+    &__subtitle {
+        font-family: $merri;
+        font-size: 26px;
+        font-weight: 400;
+        font-style: italic;
+
+        &--lines {
+            position: relative;            
+
+            &:before {
+                position: absolute;
+                content: "";
+                left: 36px;
+                top: 50%;
+                background-color: $secondary;
+                height: 1px;
+                width: 60px;
+            }
+
+            &:after {
+                position: absolute;
+                content: "";
+                right: 36px;
+                top: 50%;
+                background-color: $secondary;
+                height: 1px;
+                width: 60px;
+            }
+
+        }
+    }
+
+}
