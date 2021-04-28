@@ -41,7 +41,7 @@
 
 .header {
   min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/main-screen.jpg?c1d695e5a7cbd7ce53fb60f879f9d1e3);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/main-screen.jpg?2505fd38e9753f275e6a1a133946da3f);
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -87,4 +87,40 @@
   background-color: #d1aa67;
   height: 1px;
   width: 60px;
+}
+
+.about {
+  padding-top: 160px;
+}
+.about__img img {
+  width: 100%;
+}
+
+.section__title {
+  font-family: "Merriweather", sans-serif;
+  font-size: 30px;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+}
+.section__title:after {
+  position: absolute;
+  content: "";
+  left: 50%;
+  bottom: -10px;
+  background-color: #d1aa67;
+  height: 2px;
+  width: 100px;
+  transform: translateX(-50%);
+}
+.section__subtitle {
+  font-size: 20px;
+  font-style: italic;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.section__desc {
+  margin-bottom: 20px;
 }

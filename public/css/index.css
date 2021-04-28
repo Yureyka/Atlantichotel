@@ -20,10 +20,17 @@
   font-display: swap;
 }
 @font-face {
-  font-family: "Roboto";
+  font-family: "Raleway";
   font-style: normal;
   font-weight: 400;
-  src: local(""), url(/fonts/roboto-v27-latin_cyrillic-regular.woff2?91f689ac38236365183d3c2dfd4d4976) format("woff2"), url(/fonts/roboto-v27-latin_cyrillic-regular.woff?90fc8764675b01c9cc054a3679d3a600) format("woff");
+  src: local(""), url(/fonts/raleway-v19-latin_cyrillic-regular.woff2?31d6cfe0d16ae931b73c59d7e0c089c0) format("woff2"), url(/fonts/raleway-v19-latin_cyrillic-regular.woff?c6f1771dfb3fe2d20afbe466e0c295a9) format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Raleway";
+  font-style: italic;
+  font-weight: 400;
+  src: local(""), url(/fonts/raleway-v19-latin_cyrillic-italic.woff2?32dbb25fa602a77975019b05f9e82d23) format("woff2"), url(/fonts/raleway-v19-latin_cyrillic-italic.woff?31d6cfe0d16ae931b73c59d7e0c089c0) format("woff");
   font-display: swap;
 }
 *,
@@ -40,8 +47,9 @@ html {
 
 body {
   height: 100%;
-  font-family: "Roboto", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 14px;
+  line-height: 1.5;
 }
 
 ul {
@@ -53,4 +61,10 @@ a {
 }
 a:hover {
   text-decoration: none;
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1140px;
+  }
 }

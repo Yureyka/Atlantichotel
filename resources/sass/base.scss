@@ -14,8 +14,9 @@ html {
 
 body {
     height: 100%;
-    font-family: $roboto;
+    font-family: $primary-font;
     font-size: 14px;
+    line-height: 1.5;
 }
 
 ul {
@@ -27,5 +28,11 @@ a {
 
     &:hover {
         text-decoration: none;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1140px;
     }
 }
