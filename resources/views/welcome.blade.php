@@ -13,7 +13,7 @@
 
 <body>
     <header class="header">
-        <div class="container">
+        <div class="container header__container--top">
             <nav class="nav">
                 <div class="nav__info">
                     <div class="nav__logo">
@@ -42,11 +42,18 @@
             </nav>
             <div class="header__content">
                 <h2 class="header__subtitle">Добро пожаловать</h2>
-                <h1 class="header__title">ASTORIA HOTEL</h1>
+                <h1 class="header__title">ATLANTIC HOTEL</h1>
                 <h2 class="header__subtitle header__subtitle--lines">Откройте для себя роскошь</h2>
+            </div>
+
+        </div>
+        <div class="container header__container--bottom">
+            <div class="header__booking">
+                @include('booking')
             </div>
         </div>
     </header>
+
     <main>
         <section class="section about">
             <div class="container">
@@ -63,10 +70,10 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <h3 class="section__title">Добро пожаловать в Astoria</h3>
+                        <h3 class="section__title">Добро пожаловать в Atlantic</h3>
                         <h4 class="section__subtitle">Уникальные отели</h4>
                         <p class="section__desc">
-                            Астория &ndash; это уютные отели с просторными номерами отзывчивым персоналом и высоким качеством обслуживания.
+                            Атлантик &ndash; это уютные отели с просторными номерами отзывчивым персоналом и высоким качеством обслуживания.
                             Рядом с отелями
                             расположены сети магазинов, кафе и рестораны, супермаркеты,
                             торгово-развлекательный центры, все необходимое в шаговой
@@ -85,6 +92,37 @@
                             Каждый номер оборудован необходимой техникой: кондиционер,
                             холодильник, телевизор. Постояльцы отеля могут пользоваться
                             высокоскоростным 4-Й в любое время суток.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="advantages">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="advantages__icon">
+                            <img src="{{ asset('images/icons/food.svg') }}" alt="">
+                        </div>
+                        <h4>БЕСПЛАТНЫЙ ЗАВТРАК</h4>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="advantages__icon">
+                            <img src="{{ asset('images/icons/service.svg') }}" alt="">
+                        </div>
+                        <h4>ОБСЛУЖИВАНИЕ НОМЕРОВ</h4>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="advantages__icon">
+                            <img src="{{ asset('images/icons/camera.svg') }}" alt="">
+                        </div>
+                        <h4>ОХРАНЯЕМАЯ ПАРКОВКА</h4>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="advantages__icon">
+                            <img src="{{ asset('images/icons/wifi.svg') }}" alt="">
+                        </div>
+                        <h4>БЕСПЛАТНЫЙ WI-FI</h4>
                     </div>
                 </div>
             </div>

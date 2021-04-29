@@ -31,6 +31,25 @@ a {
     }
 }
 
+input {
+    font-family: $primary-font;
+}
+
+.button {
+    background-color: $primary;
+    font-family: $primary-font;
+    font-size: 16px;
+    color: #fff;
+    padding: 12px 38px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+}
+
 @media (min-width: 1400px) {
     .container {
         max-width: 1140px;
