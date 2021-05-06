@@ -211,6 +211,7 @@
   background-color: #f8f8f8;
   padding: 90px 0;
   text-align: center;
+  margin-bottom: 40px;
 }
 .advantages__icon {
   display: flex;
@@ -224,4 +225,150 @@
 }
 .advantages__icon img {
   max-width: 40px;
+}
+
+.best-rooms {
+  background-image: url(/images/about-bg.svg?74d8d73…);
+  background-size: 35%;
+  background-position: -12% bottom;
+  background-repeat: no-repeat;
+  margin-bottom: 40px;
+}
+.best-rooms__main {
+  margin-bottom: 60px;
+}
+.best-rooms__img img {
+  width: 100%;
+}
+.best-rooms__price {
+  display: flex;
+  justify-content: center;
+}
+.best-rooms .section__subtitle {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Merriweather", sans-serif;
+}
+
+.price {
+  padding: 24px 36px;
+  background-color: #424242;
+  display: inline-block;
+  border-radius: 3px;
+  margin: 0 auto;
+}
+.price__title {
+  font-family: "Merriweather", sans-serif;
+  font-style: italic;
+  color: #c7956f;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.price__cost {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.price--tiny {
+  padding: 12px 18px;
+}
+.price--tiny .price__cost {
+  font-size: 18px;
+}
+.price .button {
+  display: block;
+  margin: 0 auto;
+}
+
+.room {
+  display: flex;
+}
+.room__img img {
+  width: 310px;
+  height: 226px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.room__info {
+  padding: 0 20px 20px;
+  position: relative;
+}
+.room__info::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: -60px;
+  right: 0;
+  bottom: -30px;
+  border: 2px solid #d1aa67;
+  z-index: -228;
+}
+.room__title {
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+.gallery {
+  margin-bottom: 40px;
+}
+.gallery__items {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.gallery__item {
+  width: 20%;
+  position: relative;
+  overflow: hidden;
+}
+.gallery__item img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 230px;
+  display: block;
+  transition: transform 0.2s ease-in-out;
+}
+.gallery__item img:hover {
+  transform: scale(1.05);
+}
+.gallery__button {
+  display: flex;
+  justify-content: center;
+}
+
+.reviews {
+  padding: 30px 0;
+  background-color: #f8f8f8;
+  margin-bottom: 40px;
+}
+.reviews .section__title {
+  margin-bottom: 80px;
+}
+
+.review__title {
+  text-align: center;
+  margin-bottom: 8px;
+}
+.review__content {
+  background-color: #fff;
+  padding: 20px;
+}
+.review__footer {
+  padding: 20px;
+}
+.review__name {
+  font-size: 14px;
+}
+.review__date {
+  font-style: italic;
+}
+.review .stars {
+  margin-bottom: 8px;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
 }

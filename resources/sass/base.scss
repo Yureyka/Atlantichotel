@@ -17,6 +17,7 @@ body {
     font-family: $primary-font;
     font-size: 14px;
     line-height: 1.5;
+    scroll-behavior: smooth;
 }
 
 ul {
@@ -36,17 +37,27 @@ input {
 }
 
 .button {
-    background-color: $primary;
     font-family: $primary-font;
-    font-size: 16px;
     color: #fff;
-    padding: 12px 38px;
-    border: none;
     border-radius: 3px;
     cursor: pointer;
 
     &:focus {
         outline: none;
+    }
+
+    &--primary {
+        background-color: $primary;
+        font-size: 16px;
+        padding: 12px 38px;
+        border: none;
+    }
+
+    &--secondary {
+        background-color: transparent;
+        font-size: 14px;
+        padding: 8px 22px;
+        border: 1px solid $primary;
     }
 }
 
