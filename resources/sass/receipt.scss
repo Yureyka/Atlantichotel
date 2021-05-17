@@ -1,0 +1,90 @@
+@import "variables";
+@import "breadcrumbs";
+
+.main {
+    background-image: url(/images/about-bg.svg);
+    background-size: 35%;
+    background-position: 110% 20%;
+    background-repeat: no-repeat;
+}
+
+.receipt {
+    margin-bottom: 40px;
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+
+    &__number {
+        display: flex;
+
+        h2 {
+            font-size: 26px;
+        }
+    }
+
+    &__print {
+        a {
+            &:first-child {
+                margin-right: 20px;
+            }
+        }
+    }
+
+    &__table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 40px;
+
+        td {
+            padding: 8px 20px;
+        }
+
+        tr {
+            background-color: #fcfcfc;
+
+            &:nth-child(2n) {
+                background-color: #f1f1f1;
+            }
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        h3 {
+            font-weight: 400;
+        }
+    }
+
+    &__td-right {
+        text-align: right;
+    }
+
+    &__summary {
+        background-color: #fcfcfc;
+        margin-bottom: 40px;
+        padding: 8px 20px;
+
+        h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__cancel {
+        display: flex;
+
+        a {
+            display: block;
+            margin-left: auto;
+        }
+    }
+}

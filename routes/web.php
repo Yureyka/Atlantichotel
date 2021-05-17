@@ -32,3 +32,11 @@ Route::get('details', function () {
 Route::get('apartments', function () {
     return view('apartments');
 })->name('apartments');
+
+Route::get('contacts', function () {
+    return view('contacts');
+})->name('contacts');
+
+Route::get('receipt', function () {
+    return view('receipt');
+})->name('receipt');

@@ -12,6 +12,13 @@
   font-family: none;
 }
 
+.main {
+  background-image: url(/images/about-bg.svg);
+  background-size: 35%;
+  background-position: 110% 20%;
+  background-repeat: no-repeat;
+}
+
 .gallery {
   margin-bottom: 40px;
   display: grid;

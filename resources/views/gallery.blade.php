@@ -16,7 +16,7 @@
 
     @include('breadcrumbs', ['paths' => ['/' => 'Главная', 'reservation' => 'Галерея']])
 
-    <main>
+    <main class="main">
         <div class="container">
             <div class="section">
                 <h2 class="section__title">Галерея</h2>
