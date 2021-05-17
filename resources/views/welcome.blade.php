@@ -13,44 +13,16 @@
 
 <body>
     <header class="header">
-        <div class="container header__container--top">
-            <nav class="nav">
-                <div class="nav__info">
-                    <div class="nav__logo">
-                        <a href="/">
-                            <img src="{{ asset('images/logo.svg') }}" alt="Atlantic Logo">
-                        </a>
-                    </div>
-                    <ul class="nav__list">
-                        <li class="nav__item">
-                            <a class="nav__link" href="#">ГЛАВНАЯ</a>
-                        </li>
-                        <li class="nav__item">
-                            <a class="nav__link" href="#">ОТЕЛИ</a>
-                        </li>
-                        <li class="nav__item">
-                            <a class="nav__link" href="#">ГАЛЕРЕЯ</a>
-                        </li>
-                        <li class="nav__item">
-                            <a class="nav__link" href="#">КОНТАКТЫ</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="nav__tel">
-                    <a class="nav__link" href="tel:89787777777">+7 (978) 777-77-77</a>
-                </div>
-            </nav>
+        @include('nav')
+        <div class="container">
             <div class="header__content">
                 <h2 class="header__subtitle">Добро пожаловать</h2>
                 <h1 class="header__title">ATLANTIC HOTEL</h1>
                 <h2 class="header__subtitle header__subtitle--lines">Откройте для себя роскошь</h2>
             </div>
-
         </div>
-        <div class="container header__container--bottom">
-            <div class="header__booking">
-                @include('booking')
-            </div>
+        <div class="header__booking">
+            @include('booking')
         </div>
     </header>
 

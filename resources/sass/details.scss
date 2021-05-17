@@ -1,0 +1,84 @@
+@import "variables";
+@import "breadcrumbs";
+@import "cart";
+
+.main {
+    background-image: url(/images/about-bg.svg);
+    background-size: 35%;
+    background-position: 110% 20%;
+    background-repeat: no-repeat;
+}
+
+.details {
+    &__title {
+        font-size: 22px;
+    }
+
+    &__subtitle {
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 14px;
+    }
+
+    &__form {
+        width: 100%;
+        margin: 20px 0 40px 0;
+
+        input, textarea {
+            transition: border 0.3s ease-in-out;
+            &:focus {
+                outline: none;
+                border: 1px solid $primary;
+            }
+        }
+
+        textarea {
+            width: 100%;
+            resize: none;
+            border-radius: 3px;
+            border: 1px solid #c7c7c7;
+            padding: 10px;
+        }
+    }
+
+    &__inputs {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__time {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    &__contact {
+        display: block;
+    }
+
+    &__input {
+        border-radius: 3px;
+        border: 1px solid #c7c7c7;
+        padding: 10px 10px;
+
+        &--text {
+            width: 32%;
+        }
+
+        &--time {
+            width: 100px;
+            margin: 0 30px;
+        }
+
+        &--contact {
+            width: 60%;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__send {
+        display: flex;
+        justify-content: end;
+        margin-bottom: 40px;
+    }
+}

@@ -1,0 +1,147 @@
+.breadcrumbs {
+  display: flex;
+  margin: 20px 0;
+}
+.breadcrumbs a {
+  color: #424242;
+}
+.breadcrumbs .breadcrumbs__item + .breadcrumbs__item:before {
+  padding: 0 4px 0 8px;
+  color: black;
+  content: "/";
+  font-family: none;
+}
+
+.cart {
+  margin: 40px 0;
+}
+.cart__summary {
+  background-color: #f8f8f8;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+.cart__info {
+  margin-left: 20px;
+}
+.cart__flex {
+  display: flex;
+  align-items: center;
+}
+.cart__text {
+  font-size: 14px;
+  font-weight: 400;
+}
+.cart__sum {
+  font-size: 24px;
+  margin-left: 12px;
+}
+.cart .button {
+  margin-left: 20px;
+}
+.cart__delete {
+  display: flex;
+  background-color: #e7e7e7;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 3px;
+  justify-content: center;
+  align-items: center;
+}
+.cart__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.cart__table thead th {
+  font-weight: 400;
+}
+.cart__table td {
+  border: 1px solid #c7c7c7;
+}
+.cart__table th,
+.cart__table td {
+  text-align: left;
+  padding: 10px;
+  font-size: 16px;
+}
+.cart__td-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart__td-select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  background-image: url(/images/about-bg.svg);
+  background-size: 35%;
+  background-position: 110% 20%;
+  background-repeat: no-repeat;
+}
+
+.details__title {
+  font-size: 22px;
+}
+.details__subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 14px;
+}
+.details__form {
+  width: 100%;
+  margin: 20px 0 40px 0;
+}
+.details__form input, .details__form textarea {
+  transition: border 0.3s ease-in-out;
+}
+.details__form input:focus, .details__form textarea:focus {
+  outline: none;
+  border: 1px solid #c7956f;
+}
+.details__form textarea {
+  width: 100%;
+  resize: none;
+  border-radius: 3px;
+  border: 1px solid #c7c7c7;
+  padding: 10px;
+}
+.details__inputs {
+  display: flex;
+  justify-content: space-between;
+}
+.details__time {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.details__contact {
+  display: block;
+}
+.details__input {
+  border-radius: 3px;
+  border: 1px solid #c7c7c7;
+  padding: 10px 10px;
+}
+.details__input--text {
+  width: 32%;
+}
+.details__input--time {
+  width: 100px;
+  margin: 0 30px;
+}
+.details__input--contact {
+  width: 60%;
+  margin-bottom: 20px;
+}
+.details__send {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 40px;
+}

@@ -1,14 +1,22 @@
-.nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+@import "variables";
 
+.nav {
     &__logo {
         width: 120px;
         margin-right: 100px;
 
         img {
+            display: block;
             width: 100%;
+        }
+    }
+
+    &--black {
+        background-color: $text-color;
+        padding-bottom: 20px;
+
+        .nav__logo {
+            width: 80px;
         }
     }
 
@@ -48,5 +56,11 @@
     &__info {
         display: flex;
         align-items: center;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 }

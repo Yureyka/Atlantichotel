@@ -68,11 +68,54 @@ input {
   font-family: "Raleway", sans-serif;
 }
 
+button {
+  cursor: pointer;
+}
+
+select {
+  background-color: transparent;
+  padding: 6px 12px;
+  border: 1px solid #c7c7c7;
+}
+select:active, select:focus-visible {
+  outline: none;
+}
+
+.section__title {
+  font-family: "Merriweather", sans-serif;
+  font-size: 30px;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+}
+.section__title:after {
+  position: absolute;
+  content: "";
+  left: 50%;
+  bottom: -10px;
+  background-color: #d1aa67;
+  height: 2px;
+  width: 100px;
+  transform: translateX(-50%);
+}
+.section__subtitle {
+  font-size: 20px;
+  font-style: italic;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.section__desc {
+  margin-bottom: 20px;
+}
+
 .button {
   font-family: "Raleway", sans-serif;
   color: #fff;
   border-radius: 3px;
   cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
 }
 .button:focus {
   outline: none;
@@ -83,11 +126,23 @@ input {
   padding: 12px 38px;
   border: none;
 }
+.button--primary:hover {
+  background-color: #c0875d;
+}
+.button--primary:active {
+  background-color: #b97a4a;
+}
 .button--secondary {
   background-color: transparent;
   font-size: 14px;
   padding: 8px 22px;
   border: 1px solid #c7956f;
+}
+.button--secondary:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.button--secondary:active {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 @media (min-width: 1400px) {
@@ -95,6 +150,55 @@ input {
     max-width: 1140px;
   }
 }
+.nav__logo {
+  width: 120px;
+  margin-right: 100px;
+}
+.nav__logo img {
+  display: block;
+  width: 100%;
+}
+.nav--black {
+  background-color: #424242;
+  padding-bottom: 20px;
+}
+.nav--black .nav__logo {
+  width: 80px;
+}
+.nav__list {
+  display: flex;
+}
+.nav__item {
+  margin: 0 30px;
+}
+.nav__link {
+  position: relative;
+  font-size: 18px;
+  color: #fff;
+}
+.nav__link:hover:after {
+  width: 100%;
+}
+.nav__link:after {
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  content: "";
+  background-color: #d1aa67;
+  height: 2px;
+  width: 0%;
+  transition: all 0.5s ease-in-out;
+}
+.nav__info {
+  display: flex;
+  align-items: center;
+}
+.nav__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .footer {
   background-color: #424242;
   padding: 60px 0;

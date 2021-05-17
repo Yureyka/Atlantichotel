@@ -1,0 +1,75 @@
+.breadcrumbs {
+  display: flex;
+  margin: 20px 0;
+}
+.breadcrumbs a {
+  color: #424242;
+}
+.breadcrumbs .breadcrumbs__item + .breadcrumbs__item:before {
+  padding: 0 4px 0 8px;
+  color: black;
+  content: "/";
+  font-family: none;
+}
+
+.main {
+  background-image: url(/images/about-bg.svg);
+  background-size: 35%;
+  background-position: 110% 20%;
+  background-repeat: no-repeat;
+}
+
+.apartments {
+  margin-bottom: 40px;
+}
+.apartments__img {
+  margin-right: 10px;
+}
+.apartments__img img {
+  width: 100%;
+}
+.apartments__title {
+  font-size: 22px;
+  margin-bottom: 14px;
+}
+.apartments__desc {
+  margin-bottom: 10px;
+}
+.apartments__sum {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+.apartments__sum h5 {
+  font-weight: 400;
+  font-size: 14px;
+  margin-right: 10px;
+}
+.apartments__sum h4 {
+  font-size: 20px;
+  margin-left: 10px;
+}
+.apartments__info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.apartments__bottom {
+  margin-bottom: 110px;
+}
+.apartments__margin {
+  margin-bottom: 40px;
+}
+.apartments__slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.apartments__slider img {
+  width: 100px;
+}
+.apartments .button {
+  display: inline-block;
+}

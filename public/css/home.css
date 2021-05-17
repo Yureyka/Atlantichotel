@@ -1,15 +1,18 @@
 @charset "UTF-8";
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 .nav__logo {
   width: 120px;
   margin-right: 100px;
 }
 .nav__logo img {
+  display: block;
   width: 100%;
+}
+.nav--black {
+  background-color: #424242;
+  padding-bottom: 20px;
+}
+.nav--black .nav__logo {
+  width: 80px;
 }
 .nav__list {
   display: flex;
@@ -38,6 +41,11 @@
 .nav__info {
   display: flex;
   align-items: center;
+}
+.nav__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .booking {
@@ -106,7 +114,6 @@
 .header {
   min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/main-screen.jpg?2505fd38e9753f275e6a1a133946da3f);
-  height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -153,22 +160,15 @@
   width: 60px;
 }
 .header__booking {
-  padding: 0 12px;
   position: absolute;
   bottom: -40px;
   left: 0;
   right: 0;
 }
-.header__container--top {
-  height: 100%;
-}
-.header__container--bottom {
-  position: relative;
-}
 
 .about {
   padding-top: 110px;
-  background-image: url(/images/about-bg.svg?74d8d73…);
+  background-image: url(/images/about-bg.svg);
   background-size: 35%;
   background-position: 110% center;
   background-repeat: no-repeat;
@@ -176,35 +176,6 @@
 }
 .about__img img {
   width: 100%;
-}
-
-.section__title {
-  font-family: "Merriweather", sans-serif;
-  font-size: 30px;
-  font-style: italic;
-  text-align: center;
-  margin-bottom: 50px;
-  position: relative;
-}
-.section__title:after {
-  position: absolute;
-  content: "";
-  left: 50%;
-  bottom: -10px;
-  background-color: #d1aa67;
-  height: 2px;
-  width: 100px;
-  transform: translateX(-50%);
-}
-.section__subtitle {
-  font-size: 20px;
-  font-style: italic;
-  text-align: center;
-  font-weight: 400;
-  margin-bottom: 20px;
-}
-.section__desc {
-  margin-bottom: 20px;
 }
 
 .advantages {

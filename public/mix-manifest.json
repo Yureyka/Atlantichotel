@@ -1,5 +1,9 @@
 {
     "/js/app.js": "/js/app.js",
+    "/css/details.css": "/css/details.css",
+    "/css/gallery.css": "/css/gallery.css",
+    "/css/reservation.css": "/css/reservation.css",
     "/css/home.css": "/css/home.css",
-    "/css/index.css": "/css/index.css"
+    "/css/index.css": "/css/index.css",
+    "/css/apartments.css": "/css/apartments.css"
 }

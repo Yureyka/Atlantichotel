@@ -19087,6 +19087,19 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 
 /***/ }),
 
+/***/ "./resources/sass/apartments.scss":
+/*!****************************************!*\
+  !*** ./resources/sass/apartments.scss ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./resources/sass/index.scss":
 /*!***********************************!*\
   !*** ./resources/sass/index.scss ***!
@@ -19104,6 +19117,45 @@ __webpack_require__.r(__webpack_exports__);
 /*!**********************************!*\
   !*** ./resources/sass/home.scss ***!
   \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./resources/sass/reservation.scss":
+/*!*****************************************!*\
+  !*** ./resources/sass/reservation.scss ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./resources/sass/gallery.scss":
+/*!*************************************!*\
+  !*** ./resources/sass/gallery.scss ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./resources/sass/details.scss":
+/*!*************************************!*\
+  !*** ./resources/sass/details.scss ***!
+  \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -19417,8 +19469,12 @@ process.umask = function() { return 0; };
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/js/app": 0,
+/******/ 			"css/details": 0,
+/******/ 			"css/gallery": 0,
+/******/ 			"css/reservation": 0,
 /******/ 			"css/home": 0,
-/******/ 			"css/index": 0
+/******/ 			"css/index": 0,
+/******/ 			"css/apartments": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -19466,9 +19522,13 @@ process.umask = function() { return 0; };
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/home","css/index"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/home","css/index"], () => (__webpack_require__("./resources/sass/index.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/home","css/index"], () => (__webpack_require__("./resources/sass/home.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/details","css/gallery","css/reservation","css/home","css/index","css/apartments"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/details","css/gallery","css/reservation","css/home","css/index","css/apartments"], () => (__webpack_require__("./resources/sass/index.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/details","css/gallery","css/reservation","css/home","css/index","css/apartments"], () => (__webpack_require__("./resources/sass/home.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/details","css/gallery","css/reservation","css/home","css/index","css/apartments"], () => (__webpack_require__("./resources/sass/reservation.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/details","css/gallery","css/reservation","css/home","css/index","css/apartments"], () => (__webpack_require__("./resources/sass/gallery.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/details","css/gallery","css/reservation","css/home","css/index","css/apartments"], () => (__webpack_require__("./resources/sass/details.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/details","css/gallery","css/reservation","css/home","css/index","css/apartments"], () => (__webpack_require__("./resources/sass/apartments.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

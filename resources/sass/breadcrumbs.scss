@@ -1,0 +1,17 @@
+@import "variables";
+
+.breadcrumbs {
+    display: flex;
+    margin: 20px 0;
+
+    a {
+        color: $text-color;
+    }
+
+    & &__item + &__item:before {
+        padding: 0 4px 0 8px;
+        color: black;
+        content: "/";
+        font-family: none;
+      }
+}
