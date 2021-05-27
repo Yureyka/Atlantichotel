@@ -27,8 +27,12 @@
         }
     }
 
-    &__social {
+    &__icons {
         display: flex;
-        justify-content: center;
+        align-items: center;
+
+        img {
+            margin-right: 10px;
+        }
     }
 }

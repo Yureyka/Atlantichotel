@@ -224,7 +224,10 @@ select:active, select:focus-visible {
   font-size: 14px;
   color: #fff;
 }
-.footer__social {
+.footer__icons {
   display: flex;
-  justify-content: center;
+  align-items: center;
+}
+.footer__icons img {
+  margin-right: 10px;
 }

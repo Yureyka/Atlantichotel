@@ -14,7 +14,7 @@
 <body>
     @include('nav', ['isBlack' => true])
 
-    @include('breadcrumbs', ['paths' => ['/' => 'Главная', 'reservation' => 'Галерея']])
+    @include('breadcrumbs', ['paths' => ['/' => 'Главная', 'gallery' => 'Галерея']])
 
     <main class="main">
         <div class="container">

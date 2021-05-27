@@ -16,7 +16,7 @@
 <body>
     @include('nav', ['isBlack' => true])
 
-    @include('breadcrumbs', ['paths' => ['/' => 'Главная', 'reservation' => 'Одноместный номер']])
+    @include('breadcrumbs', ['paths' => ['/' => 'Главная', 'reservation' => 'Номера', 'apartments' => 'Одноместный номер']])
 
     <main class="main">
         <div class="container">

@@ -9,16 +9,16 @@
                 </div>
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a class="nav__link" href="#">ГЛАВНАЯ</a>
+                        <a class="nav__link" href="{{ route('welcome') }}">ГЛАВНАЯ</a>
                     </li>
                     <li class="nav__item">
-                        <a class="nav__link" href="#">ОТЕЛИ</a>
+                        <a class="nav__link" href="{{ route('reservation') }}">НОМЕРА</a>
                     </li>
                     <li class="nav__item">
-                        <a class="nav__link" href="#">ГАЛЕРЕЯ</a>
+                        <a class="nav__link" href="{{ route('gallery') }}">ГАЛЕРЕЯ</a>
                     </li>
                     <li class="nav__item">
-                        <a class="nav__link" href="#">КОНТАКТЫ</a>
+                        <a class="nav__link" href="{{ route('contacts') }}">КОНТАКТЫ</a>
                     </li>
                 </ul>
             </div>

@@ -12,10 +12,10 @@
             <div class="col-md-4">
                 <h5 class="footer__title">Полезные ссылки</h5>
                 <ul>
-                    <li class="footer__link"><a href="#">Главная</a></li>
-                    <li class="footer__link"><a href="#">Галерея</a></li>
-                    <li class="footer__link"><a href="#">Отели</a></li>
-                    <li class="footer__link"><a href="#">Контакты</a></li>
+                    <li class="footer__link"><a href="{{ route('welcome') }}">Главная</a></li>
+                    <li class="footer__link"><a href="{{ route('gallery') }}">Галерея</a></li>
+                    <li class="footer__link"><a href="{{ route('reservation') }}">Номера</a></li>
+                    <li class="footer__link"><a href="{{ route('contacts') }}">Контакты</a></li>
                 </ul>
             </div>
 
@@ -33,6 +33,11 @@
             <div class="col-md-3">
                 <div class="footer__social">
                     <h5 class="footer__title">Мы в соцсетях</h5>
+                    <div class="footer__icons">
+                        <img src="{{ asset('images/icons/inst-icon.svg') }}" alt="">
+                        <img src="{{ asset('images/icons/fb-icon.svg') }}" alt="">
+                        <img src="{{ asset('images/icons/vk-icon.svg') }}" alt="">
+                    </div>
                 </div>
             </div>
         </div>
