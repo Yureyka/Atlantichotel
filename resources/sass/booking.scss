@@ -1,6 +1,6 @@
 .booking {
     width: 100%;
-    padding: 20px;
+    padding: 20px 20px 40px;
     background-color: $text-color;
     border-radius: 3px;
     color: #fff;
@@ -42,129 +42,11 @@
         }
     }
 
-    &__guests {
-        position: relative;
-
-        input {
-            padding-right: 40px;
-        }
-
-        img {
-            position: absolute;
-            right: 8px;
-            top: 40%;
-            transform: translateY(-50%);
-        }
-    }
-
     &__inputs {
         display: flex;
         align-items: flex-end;
     }
-
-    &__transfer {
-        display: flex;
-        margin-top: 16px;
-        align-items: center;
-    }
-
-    &__checkbox {
-        position: absolute;
-        z-index: -1;
-        opacity: 0;
-
-
-        &+label {
-            display: inline-flex;
-            align-items: center;
-            user-select: none;
-
-            &:before {
-                content: '';
-                display: inline-block;
-                width: 1em;
-                height: 1em;
-                flex-shrink: 0;
-                flex-grow: 0;
-                border: 1px solid #adb5bd;
-                margin-right: 0.5em;
-                background-repeat: no-repeat;
-                background-position: center center;
-                background-size: 70% 70%;
-            }
-        }
-
-        &:checked+label::before {
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
-        }
-
-        label {
-            margin-left: 12px;
-
-        }
-    }
-
-    &__modal {
-        display: none;
-        position: absolute;
-        top: 86px;
-        left: 0;
-        padding: 30px 24px;
-        background-color: #fff;
-        border: 1px solid $inactive-color;
-        border-radius: 3px;
-        width: 340px;
-        z-index: 1;
-
-        &.show {
-            display: block;
-        }
-
-        &:after {
-            content: "";
-            width: 0;
-            height: 0;
-            border-left: 8px solid transparent;
-            border-right: 8px solid transparent;
-            border-bottom: 10px solid #fff;
-            position: absolute;
-            top: -9px;
-            left: 32px;
-        }
-
-        .modal {
-            &__row {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                margin-bottom: 14px;
-            }
-
-            &__label {
-                display: flex;
-                align-items: center;
-                color: $text-color;
-
-                img {
-                    margin-right: 12px;
-                }
-            }
-
-            &__input {
-                width: 70px;
-                font-size: 18px;
-                padding: 4px 8px 6px;
-                border-radius: 4px;
-                border: 1px solid $inactive-color;
-            }
-
-            &__button {
-                margin-top: 32px;
-                text-align: center;
-            }
-        }
-    }
-
+    
     ::-webkit-calendar-picker-indicator {
         filter: invert(1);
         opacity: .6;

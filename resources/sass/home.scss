@@ -248,7 +248,7 @@
 .review {
     &__title {
         text-align: center;
-        margin-bottom: 8px;
+        margin-bottom: 4px;
     }
 
     &__content {
@@ -269,11 +269,8 @@
     }
 
     .stars {
+        display: flex;
+        justify-content: center;
         margin-bottom: 8px;
     }
-}
-
-.stars {
-    display: flex;
-    justify-content: center;
 }

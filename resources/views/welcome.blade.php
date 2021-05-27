@@ -278,7 +278,7 @@
                 </div>
             </div>
             <div class="gallery__button">
-                <a href="#" class="button button--primary">Посмотреть все фото</a>
+                <a href="{{ route('gallery') }}" class="button button--primary">Посмотреть все фото</a>
             </div>
         </section>
 
@@ -291,15 +291,14 @@
                             <div class="review__content">
                                 <h3 class="review__title">ОТЛИЧНО</h3>
                                 <div class="stars">
-                                    <span>1</span>
-                                    <span>2</span>
-                                    <span>3</span>
-                                    <span>4</span>
-                                    <span>5</span>
+                                    <img src="{{ asset('images/icons/star-icon.svg') }}" alt="">
+                                    <img src="{{ asset('images/icons/star-icon.svg') }}" alt="">
+                                    <img src="{{ asset('images/icons/star-icon.svg') }}" alt="">
+                                    <img src="{{ asset('images/icons/star-icon.svg') }}" alt="">
+                                    <img src="{{ asset('images/icons/star-icon.svg') }}" alt="">
                                 </div>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Natus vitae corporis aliquid autem impedit distinctio perspiciatis quis veritatis temporibus! Inventore?
+                                    Вы не представляете, насколько я была счастлива пожить в этом отеле. Меня хорошо кормили, а на ресепшн стояла ваза с конфетками. Тауалет, кстати, тоже кайф. Спасибо!
                                 </p>
                             </div>
                             <div class="review__footer">
@@ -313,15 +312,14 @@
                             <div class="review__content">
                                 <h3 class="review__title">ОТЛИЧНО</h3>
                                 <div class="stars">
-                                    <span>1</span>
-                                    <span>2</span>
-                                    <span>3</span>
-                                    <span>4</span>
-                                    <span>5</span>
+                                    <img src="{{ asset('images/icons/star-icon.svg') }}" alt="">
+                                    <img src="{{ asset('images/icons/star-icon.svg') }}" alt="">
+                                    <img src="{{ asset('images/icons/star-icon.svg') }}" alt="">
+                                    <img src="{{ asset('images/icons/star-icon.svg') }}" alt="">
+                                    <img src="{{ asset('images/icons/star-icon.svg') }}" alt="">
                                 </div>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Natus vitae corporis aliquid autem impedit distinctio perspiciatis quis veritatis temporibus! Inventore?
+                                    Если не жить, в принципе, отель неплохой.
                                 </p>
                             </div>
                             <div class="review__footer">
@@ -335,15 +333,14 @@
                             <div class="review__content">
                                 <h3 class="review__title">ОТЛИЧНО</h3>
                                 <div class="stars">
-                                    <span>1</span>
-                                    <span>2</span>
-                                    <span>3</span>
-                                    <span>4</span>
-                                    <span>5</span>
+                                    <img src="{{ asset('images/icons/star-icon.svg') }}" alt="">
+                                    <img src="{{ asset('images/icons/star-icon.svg') }}" alt="">
+                                    <img src="{{ asset('images/icons/star-icon.svg') }}" alt="">
+                                    <img src="{{ asset('images/icons/star-icon.svg') }}" alt="">
+                                    <img src="{{ asset('images/icons/star-icon.svg') }}" alt="">
                                 </div>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Natus vitae corporis aliquid autem impedit distinctio perspiciatis quis veritatis temporibus! Inventore?
+                                    Я хотел покончить жизнь самоубийством, выброситься из окна, но оно не открылось, ремонтник сказал, что рама покосилась. Вот это сервис!
                                 </p>
                             </div>
                             <div class="review__footer">
@@ -357,6 +354,7 @@
         </section>
 
         @include('footer')
+        @include('scrollup')
     </main>
 </body>
 

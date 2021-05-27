@@ -21,7 +21,6 @@
 
             <div class="col-md-3">
                 <h5 class="footer__title">Связаться с нами</h5>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque, officiis!</p>
                 <div class="footer__link">
                     <a href="tel:89787777777">+7 (978) 777-77-77</a>
                 </div>

@@ -1,6 +1,6 @@
 .booking {
   width: 100%;
-  padding: 20px;
+  padding: 20px 20px 40px;
   background-color: #424242;
   border-radius: 3px;
   color: #fff;
@@ -38,109 +38,9 @@
   outline: none;
   border-bottom: 3px solid #c7956f;
 }
-.booking__guests {
-  position: relative;
-}
-.booking__guests input {
-  padding-right: 40px;
-}
-.booking__guests img {
-  position: absolute;
-  right: 8px;
-  top: 40%;
-  transform: translateY(-50%);
-}
 .booking__inputs {
   display: flex;
   align-items: flex-end;
-}
-.booking__transfer {
-  display: flex;
-  margin-top: 16px;
-  align-items: center;
-}
-.booking__checkbox {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
-}
-.booking__checkbox + label {
-  display: inline-flex;
-  align-items: center;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-.booking__checkbox + label:before {
-  content: "";
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  flex-shrink: 0;
-  flex-grow: 0;
-  border: 1px solid #adb5bd;
-  margin-right: 0.5em;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 70% 70%;
-}
-.booking__checkbox:checked + label::before {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
-}
-.booking__checkbox label {
-  margin-left: 12px;
-}
-.booking__modal {
-  display: none;
-  position: absolute;
-  top: 86px;
-  left: 0;
-  padding: 30px 24px;
-  background-color: #fff;
-  border: 1px solid #c7c7c7;
-  border-radius: 3px;
-  width: 340px;
-  z-index: 1;
-}
-.booking__modal.show {
-  display: block;
-}
-.booking__modal:after {
-  content: "";
-  width: 0;
-  height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-bottom: 10px solid #fff;
-  position: absolute;
-  top: -9px;
-  left: 32px;
-}
-.booking__modal .modal__row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 14px;
-}
-.booking__modal .modal__label {
-  display: flex;
-  align-items: center;
-  color: #424242;
-}
-.booking__modal .modal__label img {
-  margin-right: 12px;
-}
-.booking__modal .modal__input {
-  width: 70px;
-  font-size: 18px;
-  padding: 4px 8px 6px;
-  border-radius: 4px;
-  border: 1px solid #c7c7c7;
-}
-.booking__modal .modal__button {
-  margin-top: 32px;
-  text-align: center;
 }
 .booking ::-webkit-calendar-picker-indicator {
   filter: invert(1);

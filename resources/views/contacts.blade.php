@@ -55,6 +55,7 @@
     </main>
 
     @include('footer')
+    @include('scrollup')
 </body>
 
 </html>

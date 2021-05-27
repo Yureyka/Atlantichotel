@@ -176,6 +176,7 @@
     </main>
 
     @include('footer')
+    @include('scrollup')
 
     <script>
         const slider = tns({

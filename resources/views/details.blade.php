@@ -26,10 +26,7 @@
                         </div>
                         <div class="cart__info">
                             <h6 class="cart__text">
-                                1 номер
-                            </h6>
-                            <h6 class="cart__text">
-                                10 мая - 10 мая
+                                1 одноместный номер, 1 двуместный номер
                             </h6>
                         </div>
                     </div>
@@ -48,44 +45,64 @@
             </div>
             <section class="details">
                 <form action="">
-                    <h3 class="details__title">1 Взрослый</h3>
-                    <h4 class="details__subtitle">Одноместный номер</h5>
-                        <div class="details__form">
-                            <div class="details__inputs">
-                                <input type="text" class="details__input details__input--text" placeholder="Имя">
-                                <input type="text" class="details__input details__input--text" placeholder="Фамилия">
-                                <input type="text" class="details__input details__input--text" placeholder="Отчество">
-                            </div>
+                    <h3 class="details__title">Клиент</h3>
+                    <h5 class="details__subtitle">Пожалуйста, введите ваше имя, паспортные данные и выберите количество персон</h5>
+                    <div class="details__form">
+                        <div class="details__inputs">
+                            <input type="text" class="details__input details__input--text" placeholder="Имя">
+                            <input type="text" class="details__input details__input--text" placeholder="Фамилия">
+                            <input type="text" class="details__input details__input--text" placeholder="Отчество">
+                            <input type="text" class="details__input details__input--text" placeholder="Серия и номер паспорта">
                         </div>
-                        <h3 class="details__title">Время заезда и выезда</h3>
-                        <h5 class="details__subtitle">Вы можете выбрать удобное время заезда и выезда. Стандартное время &mdash; 12:00</h5>
-                        <div class="details__form">
-                            <div class="details__time">
-                                <h3>Заезд</h3>
-                                <input type="time" class="details__input details__input--time" value="12:00" placeholder="Имя">
-                                <h3>Выезд</h3>
-                                <input type="time" class="details__input details__input--time" value="12:00" placeholder="Фамилия">
-                            </div>
-                            <textarea name="" id="" rows="5" placeholder="Дополнительные комментарии"></textarea>
+                        <div class="details__persons">
+                            <h5>Человек:</h5>
+                            <select name="" id="">
+                                <option value="1" selected>1 человек</option>
+                                <option value="2">2 человек</option>
+                                <option value="3">3 человек</option>
+                                <option value="4">4 человек</option>
+                                <option value="5">5 человек</option>
+                                <option value="6">6 человек</option>
+                            </select>
                         </div>
-                        <h3 class="details__title">Контакты для связи</h3>
-                        <h5 class="details__subtitle">На этот адрес электронной почты будет выслано письмо с подтверждением</h5>
-                        <div class="details__form">
-                            <div class="details__contacts">
-                                <input type="email" class="details__input details__input--contact" placeholder="Email">
-                                <h5 class="details__subtitle">Пожалуйста, введите номер телефона. При необходимости мы свяжемся с Вами для уточнения деталей</h5>
-                                <input type="tel" class="details__input details__input--contact" placeholder="Телефон">
-                            </div>
+                    </div>
+                    <h3 class="details__title">Время заезда и выезда</h3>
+                    <h5 class="details__subtitle">Вы можете выбрать удобное время заезда и выезда. Стандартное время &mdash; 12:00</h5>
+                    <div class="details__form">
+                        <div class="details__time">
+                            <h3>Заезд</h3>
+                            <input type="date" class="details__input details__input--date">
+                            <input type="time" class="details__input details__input--time" value="12:00">
+                            <h3>Выезд</h3>
+                            <input type="date" class="details__input details__input--date">
+                            <input type="time" class="details__input details__input--time" value="12:00">
                         </div>
-                        <div class="details__send">
-                            <button class="button button--primary" type="submit">Отправить</button>
+                        <textarea name="" id="" rows="5" placeholder="Дополнительные комментарии"></textarea>
+
+                        <div class="details__transfer">
+                            <input class="details__checkbox" type="checkbox" id="transfer">
+                            <label for="transfer">Трансфер</label>
                         </div>
+                    </div>
+                    <h3 class="details__title">Контакты для связи</h3>
+                    <h5 class="details__subtitle">На этот адрес электронной почты будет выслано письмо с подтверждением</h5>
+                    <div class="details__form">
+                        <div class="details__contacts">
+                            <input type="email" class="details__input details__input--contact" placeholder="Email">
+                            <h5 class="details__subtitle">Пожалуйста, введите номер телефона. При необходимости мы свяжемся с Вами для уточнения деталей</h5>
+                            <input type="tel" class="details__input details__input--contact" placeholder="Телефон">
+                        </div>
+                    </div>
+                    <div class="details__send">
+                        <button class="button button--primary" type="submit">Отправить</button>
+                    </div>
                 </form>
             </section>
         </div>
     </main>
 
     @include('footer')
+    @include('scrollup')
 </body>
 
 </html>
