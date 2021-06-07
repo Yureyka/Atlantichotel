@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FeedbackController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,3 +41,12 @@ Route::get('contacts', function () {
 Route::get('receipt', function () {
     return view('receipt');
 })->name('receipt');
+
+Route::post('/feedback', [FeedbackController::class, 'store'])->name('feedback');
+
+Auth::routes([
+    'register' => false,
+    'reset' => false,
+    'verify' => false,
+  ]);
+  

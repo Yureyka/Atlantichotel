@@ -40,13 +40,15 @@
                     <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A162006ce4f14d0b1e8eba4862f6c1d036103ba41fe38cce76036544481e453f4&amp;lang=ru_RU&amp;scroll=true"></script>
                     <div class="contacts__support">
                         <h3>Остались вопросы? Напишите нам</h3>
-                        <form action="">
+                        <form id="feedback-form" class="feedback">
+                            <meta name="csrf-token" content="{{ csrf_token() }}">
                             <div class="contacts__support-row">
-                                <input type="text" placeholder="Имя">
-                                <input type="email" placeholder="Email">
+                                <input id="name" type="text" placeholder="Имя">
+                                <input id="email" type="email" placeholder="Email">
                             </div>
-                            <textarea name="" id="" rows="3" placeholder="Ваше сообщение"></textarea>
-                            <button class="button button--primary">Отправить</button>
+                            <textarea id="message" rows="3" placeholder="Ваше сообщение"></textarea>
+                            <p class="feedback__response" id="response"></p>
+                            <button id="feedback_btn" class="button button--primary">Отправить</button>
                         </form>
                     </div>
                 </div>
@@ -55,7 +57,8 @@
     </main>
 
     @include('footer')
-    @include('scrollup')
+    @include('scrollup') 
+    <script src="{{ asset('js/sendTicket.js') }}"></script>
 </body>
 
 </html>

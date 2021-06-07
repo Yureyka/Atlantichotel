@@ -56,7 +56,7 @@
   background-color: transparent;
   border: 3px solid #c7c7c7;
   padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   width: 100%;
   transition: border-color 0.3s ease-in-out;
 }
@@ -86,4 +86,10 @@
 .contacts__support-row input:focus {
   outline: none;
   border-color: #c7956f;
+}
+.contacts .feedback__response {
+  font-size: 14px;
+  color: green;
+  margin-bottom: 14px;
+  text-align: center;
 }

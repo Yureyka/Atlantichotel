@@ -19126,6 +19126,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/sass/login.scss":
+/*!***********************************!*\
+  !*** ./resources/sass/login.scss ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./resources/sass/index.scss":
 /*!***********************************!*\
   !*** ./resources/sass/index.scss ***!
@@ -19500,6 +19513,7 @@ process.umask = function() { return 0; };
 /******/ 			"css/reservation": 0,
 /******/ 			"css/home": 0,
 /******/ 			"css/index": 0,
+/******/ 			"css/login": 0,
 /******/ 			"css/receipt": 0,
 /******/ 			"css/contacts": 0,
 /******/ 			"css/apartments": 0
@@ -19550,15 +19564,16 @@ process.umask = function() { return 0; };
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/details","css/gallery","css/reservation","css/home","css/index","css/receipt","css/contacts","css/apartments"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/details","css/gallery","css/reservation","css/home","css/index","css/receipt","css/contacts","css/apartments"], () => (__webpack_require__("./resources/sass/index.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/details","css/gallery","css/reservation","css/home","css/index","css/receipt","css/contacts","css/apartments"], () => (__webpack_require__("./resources/sass/home.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/details","css/gallery","css/reservation","css/home","css/index","css/receipt","css/contacts","css/apartments"], () => (__webpack_require__("./resources/sass/reservation.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/details","css/gallery","css/reservation","css/home","css/index","css/receipt","css/contacts","css/apartments"], () => (__webpack_require__("./resources/sass/gallery.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/details","css/gallery","css/reservation","css/home","css/index","css/receipt","css/contacts","css/apartments"], () => (__webpack_require__("./resources/sass/details.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/details","css/gallery","css/reservation","css/home","css/index","css/receipt","css/contacts","css/apartments"], () => (__webpack_require__("./resources/sass/apartments.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/details","css/gallery","css/reservation","css/home","css/index","css/receipt","css/contacts","css/apartments"], () => (__webpack_require__("./resources/sass/contacts.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/details","css/gallery","css/reservation","css/home","css/index","css/receipt","css/contacts","css/apartments"], () => (__webpack_require__("./resources/sass/receipt.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/details","css/gallery","css/reservation","css/home","css/index","css/login","css/receipt","css/contacts","css/apartments"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/details","css/gallery","css/reservation","css/home","css/index","css/login","css/receipt","css/contacts","css/apartments"], () => (__webpack_require__("./resources/sass/index.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/details","css/gallery","css/reservation","css/home","css/index","css/login","css/receipt","css/contacts","css/apartments"], () => (__webpack_require__("./resources/sass/home.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/details","css/gallery","css/reservation","css/home","css/index","css/login","css/receipt","css/contacts","css/apartments"], () => (__webpack_require__("./resources/sass/reservation.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/details","css/gallery","css/reservation","css/home","css/index","css/login","css/receipt","css/contacts","css/apartments"], () => (__webpack_require__("./resources/sass/gallery.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/details","css/gallery","css/reservation","css/home","css/index","css/login","css/receipt","css/contacts","css/apartments"], () => (__webpack_require__("./resources/sass/details.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/details","css/gallery","css/reservation","css/home","css/index","css/login","css/receipt","css/contacts","css/apartments"], () => (__webpack_require__("./resources/sass/apartments.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/details","css/gallery","css/reservation","css/home","css/index","css/login","css/receipt","css/contacts","css/apartments"], () => (__webpack_require__("./resources/sass/contacts.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/details","css/gallery","css/reservation","css/home","css/index","css/login","css/receipt","css/contacts","css/apartments"], () => (__webpack_require__("./resources/sass/receipt.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/details","css/gallery","css/reservation","css/home","css/index","css/login","css/receipt","css/contacts","css/apartments"], () => (__webpack_require__("./resources/sass/login.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
