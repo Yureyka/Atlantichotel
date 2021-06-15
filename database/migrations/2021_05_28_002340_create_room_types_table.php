@@ -17,6 +17,8 @@ class CreateRoomTypesTable extends Migration
             $table->id();
             $table->enum('type', ['Одноместный номер', 'Двухместный номер', 'Трехместный номер', 'Номер Люкс']);
             $table->text('description');
+            $table->text('equipment');
+            $table->text('includes');
             $table->string('price');
             $table->enum('city', ['Феодосия', 'Симферополь', 'Севастополь', 'Саки']);
         });

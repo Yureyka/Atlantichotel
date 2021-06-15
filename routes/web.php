@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FeedbackController;
+use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\RoomTypeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,10 +20,6 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-Route::get('reservation', function () {
-    return view('reservation');
-})->name('reservation');
-
 Route::get('gallery', function () {
     return view('gallery');
 })->name('gallery');
@@ -30,9 +28,7 @@ Route::get('details', function () {
     return view('details');
 })->name('details');
 
-Route::get('apartments', function () {
-    return view('apartments');
-})->name('apartments');
+Route::get('/apartments/{id}', [RoomTypeController::class, 'show'])->name('apartments');
 
 Route::get('contacts', function () {
     return view('contacts');
@@ -42,11 +38,17 @@ Route::get('receipt', function () {
     return view('receipt');
 })->name('receipt');
 
+Route::get('adminpanel', function () {
+    return view('adminpanel');
+})->name('adminpanel');
+
 Route::post('/feedback', [FeedbackController::class, 'store'])->name('feedback');
 
+Route::get('/reservation', [ReservationController::class, 'index'])->name('reservation');
+
 Auth::routes([
-    'register' => false,
-    'reset' => false,
-    'verify' => false,
+    'register' => true,
+    'reset' => true,
+    'verify' => true,
   ]);
   

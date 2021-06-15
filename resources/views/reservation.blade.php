@@ -110,201 +110,37 @@
                 </table>
             </div>
 
+            @foreach ($data as $item)
             <article class="room-card">
                 <div class="room-card__img">
-                    <picture>
-                        <source srcset="{{ asset('images/gallery/gallery1.webp') }} 1x,
-                                        {{ asset('images/gallery/gallery1@2x.webp') }} 2x" type="image/webp">
-                        <source srcset="{{ asset('images/gallery/gallery1.jpg') }} 1x,
-                                        {{ asset('images/gallery/gallery1@2x.jpg') }} 2x">
-                        <img src="{{ asset('images/gallery/gallery1.jpg') }}" alt="Интерьер номера">
-                    </picture>
+                    <img src="{{count($item->images) > 0 ? $item->images[0]->url : ''}}" alt="Интерьер номера">
                 </div>
                 <div class="room-card__info">
                     <div>
-                        <h3 class="room-card__title">Одноместный номер</h3>
+                        <h3 class="room-card__title">{{$item->type}}</h3>
                         <p class="room-card__desc">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Ex asperiores repellendus ad maxime, temporibus voluptatibus corrupti iste in ducimus a voluptatum.
-                            Natus ducimus laborum ad voluptate repellendus itaque, atque delectus.
-                        </p>
-                        <p class="room-card__desc">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Ex asperiores repellendus ad maxime, temporibus voluptatibus corrupti iste in ducimus a voluptatum.
-                            Natus ducimus laborum ad voluptate repellendus itaque, atque delectus.
+                            {!!nl2br($item->description)!!}
                         </p>
                         <div class="room-card__sum">
                             <h5 class="">Суточная цена</h5>
                             &mdash;
-                            <h4 class="">100 000 грывень</h4>
+                            <h4 class="">{{$item->price}} рублей</h4>
                         </div>
                     </div>
                     <div class="room-card__options">
                         <select>
-                            <option value="">1 пчел</option>
-                            <option value="">2 пчела</option>
-                            <option value="">3 пчела</option>
+                            <option value="">1 номер</option>
+                            <option value="">2 номера</option>
+                            <option value="">3 номера</option>
+                            <option value="">4 номера</option>
+                            <option value="">5 номеров</option>
                         </select>
                         <button class="button button--primary">Выбрать</button>
+                        <a class="button button--tertiary" href="/apartments/{{$item->id}}">Смотреть</a>
                     </div>
                 </div>
             </article>
-            <article class="room-card">
-                <div class="room-card__img">
-                    <picture>
-                        <source srcset="{{ asset('images/gallery/gallery1.webp') }} 1x,
-                                        {{ asset('images/gallery/gallery1@2x.webp') }} 2x" type="image/webp">
-                        <source srcset="{{ asset('images/gallery/gallery1.jpg') }} 1x,
-                                        {{ asset('images/gallery/gallery1@2x.jpg') }} 2x">
-                        <img src="{{ asset('images/gallery/gallery1.jpg') }}" alt="Интерьер номера">
-                    </picture>
-                </div>
-                <div class="room-card__info">
-                    <div>
-                        <h3 class="room-card__title">Одноместный номер</h3>
-                        <p class="room-card__desc">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Ex asperiores repellendus ad maxime, temporibus voluptatibus corrupti iste in ducimus a voluptatum.
-                            Natus ducimus laborum ad voluptate repellendus itaque, atque delectus.
-                        </p>
-                        <p class="room-card__desc">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Ex asperiores repellendus ad maxime, temporibus voluptatibus corrupti iste in ducimus a voluptatum.
-                            Natus ducimus laborum ad voluptate repellendus itaque, atque delectus.
-                        </p>
-                        <div class="room-card__sum">
-                            <h5 class="">Суточная цена</h5>
-                            &mdash;
-                            <h4 class="">100 000 грывень</h4>
-                        </div>
-                    </div>
-                    <div class="room-card__options">
-                        <select>
-                            <option value="">1 пчел</option>
-                            <option value="">2 пчела</option>
-                            <option value="">3 пчела</option>
-                        </select>
-                        <button class="button button--primary">Выбрать</button>
-                    </div>
-                </div>
-            </article>
-            <article class="room-card">
-                <div class="room-card__img">
-                    <picture>
-                        <source srcset="{{ asset('images/gallery/gallery1.webp') }} 1x,
-                                        {{ asset('images/gallery/gallery1@2x.webp') }} 2x" type="image/webp">
-                        <source srcset="{{ asset('images/gallery/gallery1.jpg') }} 1x,
-                                        {{ asset('images/gallery/gallery1@2x.jpg') }} 2x">
-                        <img src="{{ asset('images/gallery/gallery1.jpg') }}" alt="Интерьер номера">
-                    </picture>
-                </div>
-                <div class="room-card__info">
-                    <div>
-                        <h3 class="room-card__title">Одноместный номер</h3>
-                        <p class="room-card__desc">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Ex asperiores repellendus ad maxime, temporibus voluptatibus corrupti iste in ducimus a voluptatum.
-                            Natus ducimus laborum ad voluptate repellendus itaque, atque delectus.
-                        </p>
-                        <p class="room-card__desc">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Ex asperiores repellendus ad maxime, temporibus voluptatibus corrupti iste in ducimus a voluptatum.
-                            Natus ducimus laborum ad voluptate repellendus itaque, atque delectus.
-                        </p>
-                        <div class="room-card__sum">
-                            <h5 class="">Суточная цена</h5>
-                            &mdash;
-                            <h4 class="">100 000 грывень</h4>
-                        </div>
-                    </div>
-                    <div class="room-card__options">
-                        <select>
-                            <option value="">1 пчел</option>
-                            <option value="">2 пчела</option>
-                            <option value="">3 пчела</option>
-                        </select>
-                        <button class="button button--primary">Выбрать</button>
-                    </div>
-                </div>
-            </article>
-            <article class="room-card">
-                <div class="room-card__img">
-                    <picture>
-                        <source srcset="{{ asset('images/gallery/gallery1.webp') }} 1x,
-                                        {{ asset('images/gallery/gallery1@2x.webp') }} 2x" type="image/webp">
-                        <source srcset="{{ asset('images/gallery/gallery1.jpg') }} 1x,
-                                        {{ asset('images/gallery/gallery1@2x.jpg') }} 2x">
-                        <img src="{{ asset('images/gallery/gallery1.jpg') }}" alt="Интерьер номера">
-                    </picture>
-                </div>
-                <div class="room-card__info">
-                    <div>
-                        <h3 class="room-card__title">Одноместный номер</h3>
-                        <p class="room-card__desc">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Ex asperiores repellendus ad maxime, temporibus voluptatibus corrupti iste in ducimus a voluptatum.
-                            Natus ducimus laborum ad voluptate repellendus itaque, atque delectus.
-                        </p>
-                        <p class="room-card__desc">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Ex asperiores repellendus ad maxime, temporibus voluptatibus corrupti iste in ducimus a voluptatum.
-                            Natus ducimus laborum ad voluptate repellendus itaque, atque delectus.
-                        </p>
-                        <div class="room-card__sum">
-                            <h5 class="">Суточная цена</h5>
-                            &mdash;
-                            <h4 class="">100 000 грывень</h4>
-                        </div>
-                    </div>
-                    <div class="room-card__options">
-                        <select>
-                            <option value="">1 пчел</option>
-                            <option value="">2 пчела</option>
-                            <option value="">3 пчела</option>
-                        </select>
-                        <button class="button button--primary">Выбрать</button>
-                    </div>
-                </div>
-            </article>
-            <article class="room-card">
-                <div class="room-card__img">
-                    <picture>
-                        <source srcset="{{ asset('images/gallery/gallery1.webp') }} 1x,
-                                        {{ asset('images/gallery/gallery1@2x.webp') }} 2x" type="image/webp">
-                        <source srcset="{{ asset('images/gallery/gallery1.jpg') }} 1x,
-                                        {{ asset('images/gallery/gallery1@2x.jpg') }} 2x">
-                        <img src="{{ asset('images/gallery/gallery1.jpg') }}" alt="Интерьер номера">
-                    </picture>
-                </div>
-                <div class="room-card__info">
-                    <div>
-                        <h3 class="room-card__title">Одноместный номер</h3>
-                        <p class="room-card__desc">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Ex asperiores repellendus ad maxime, temporibus voluptatibus corrupti iste in ducimus a voluptatum.
-                            Natus ducimus laborum ad voluptate repellendus itaque, atque delectus.
-                        </p>
-                        <p class="room-card__desc">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Ex asperiores repellendus ad maxime, temporibus voluptatibus corrupti iste in ducimus a voluptatum.
-                            Natus ducimus laborum ad voluptate repellendus itaque, atque delectus.
-                        </p>
-                        <div class="room-card__sum">
-                            <h5 class="">Суточная цена</h5>
-                            &mdash;
-                            <h4 class="">100 000 грывень</h4>
-                        </div>
-                    </div>
-                    <div class="room-card__options">
-                        <select>
-                            <option value="">1 пчел</option>
-                            <option value="">2 пчела</option>
-                            <option value="">3 пчела</option>
-                        </select>
-                        <button class="button button--primary">Выбрать</button>
-                    </div>
-                </div>
-            </article>
+            @endforeach
         </div>
     </main>
 

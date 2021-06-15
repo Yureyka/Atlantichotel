@@ -64,7 +64,8 @@ a:hover {
   text-decoration: none;
 }
 
-input, textarea {
+input,
+textarea {
   font-family: "Raleway", sans-serif;
 }
 
@@ -142,6 +143,19 @@ select:active, select:focus-visible {
   background-color: rgba(0, 0, 0, 0.1);
 }
 .button--secondary:active {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.button--tertiary {
+  background-color: transparent;
+  padding: 8px 38px;
+  border: 1px solid #c7956f;
+  color: #c7956f;
+  font-size: 16px;
+}
+.button--tertiary:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.button--tertiary:active {
   background-color: rgba(0, 0, 0, 0.2);
 }
 

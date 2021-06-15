@@ -175,6 +175,6 @@
 .room-card__options {
   display: flex;
 }
-.room-card__options select {
-  margin-right: 24px;
+.room-card__options .button {
+  margin-left: 24px;
 }

@@ -28,121 +28,35 @@
                     <div class="col-md-7">
                         <div class="apartments__img">
                             <div id="my-slider">
+                                @foreach ($data->images as $image)
                                 <div>
-                                    <picture>
-                                        <source srcset="{{ asset('images/gallery/gallery5.webp') }} 1x,
-                                        {{ asset('images/gallery/gallery5@2x.webp') }} 2x" type="image/webp">
-                                        <source srcset="{{ asset('images/gallery/gallery5.jpg') }} 1x,
-                                        {{ asset('images/gallery/gallery5@2x.jpg') }} 2x">
-                                        <img src="{{ asset('images/gallery/gallery5.jpg') }}" alt="Интерьер номера">
-                                    </picture>
+                                    <img src="{{$image->url}}" alt="Интерьер номера">
                                 </div>
-                                <div>
-                                    <picture>
-                                        <source srcset="{{ asset('images/gallery/gallery1.webp') }} 1x,
-                                        {{ asset('images/gallery/gallery1@2x.webp') }} 2x" type="image/webp">
-                                        <source srcset="{{ asset('images/gallery/gallery1.jpg') }} 1x,
-                                        {{ asset('images/gallery/gallery1@2x.jpg') }} 2x">
-                                        <img src="{{ asset('images/gallery/gallery1.jpg') }}" alt="Интерьер номера">
-                                    </picture>
-                                </div>
-                                <div>
-                                    <picture>
-                                        <source srcset="{{ asset('images/gallery/gallery1.webp') }} 1x,
-                                        {{ asset('images/gallery/gallery1@2x.webp') }} 2x" type="image/webp">
-                                        <source srcset="{{ asset('images/gallery/gallery1.jpg') }} 1x,
-                                        {{ asset('images/gallery/gallery1@2x.jpg') }} 2x">
-                                        <img src="{{ asset('images/gallery/gallery1.jpg') }}" alt="Интерьер номера">
-                                    </picture>
-                                </div>
-                                <div>
-                                    <picture>
-                                        <source srcset="{{ asset('images/gallery/gallery1.webp') }} 1x,
-                                        {{ asset('images/gallery/gallery1@2x.webp') }} 2x" type="image/webp">
-                                        <source srcset="{{ asset('images/gallery/gallery1.jpg') }} 1x,
-                                        {{ asset('images/gallery/gallery1@2x.jpg') }} 2x">
-                                        <img src="{{ asset('images/gallery/gallery1.jpg') }}" alt="Интерьер номера">
-                                    </picture>
-                                </div>
-                                <div>
-                                    <picture>
-                                        <source srcset="{{ asset('images/gallery/gallery1.webp') }} 1x,
-                                        {{ asset('images/gallery/gallery1@2x.webp') }} 2x" type="image/webp">
-                                        <source srcset="{{ asset('images/gallery/gallery1.jpg') }} 1x,
-                                        {{ asset('images/gallery/gallery1@2x.jpg') }} 2x">
-                                        <img src="{{ asset('images/gallery/gallery1.jpg') }}" alt="Интерьер номера">
-                                    </picture>
-                                </div>
+                                @endforeach
                             </div>
 
                             <ul id="customize-thumbnails" class="apartments__slider">
+                                @foreach ($data->images as $image)
                                 <li>
-                                    <picture>
-                                        <source srcset="{{ asset('images/gallery/gallery1.webp') }} 1x,
-                                        {{ asset('images/gallery/gallery1@2x.webp') }} 2x" type="image/webp">
-                                        <source srcset="{{ asset('images/gallery/gallery1.jpg') }} 1x,
-                                        {{ asset('images/gallery/gallery1@2x.jpg') }} 2x">
-                                        <img src="{{ asset('images/gallery/gallery1.jpg') }}" alt="Интерьер номера">
-                                    </picture>
+                                    <img src="{{$image->url}}" alt="Интерьер номера">
                                 </li>
-                                <li>
-                                    <picture>
-                                        <source srcset="{{ asset('images/gallery/gallery1.webp') }} 1x,
-                                        {{ asset('images/gallery/gallery1@2x.webp') }} 2x" type="image/webp">
-                                        <source srcset="{{ asset('images/gallery/gallery1.jpg') }} 1x,
-                                        {{ asset('images/gallery/gallery1@2x.jpg') }} 2x">
-                                        <img src="{{ asset('images/gallery/gallery1.jpg') }}" alt="Интерьер номера">
-                                    </picture>
-                                </li>
-                                <li>
-                                    <picture>
-                                        <source srcset="{{ asset('images/gallery/gallery1.webp') }} 1x,
-                                        {{ asset('images/gallery/gallery1@2x.webp') }} 2x" type="image/webp">
-                                        <source srcset="{{ asset('images/gallery/gallery1.jpg') }} 1x,
-                                        {{ asset('images/gallery/gallery1@2x.jpg') }} 2x">
-                                        <img src="{{ asset('images/gallery/gallery1.jpg') }}" alt="Интерьер номера">
-                                    </picture>
-                                </li>
-                                <li>
-                                    <picture>
-                                        <source srcset="{{ asset('images/gallery/gallery1.webp') }} 1x,
-                                        {{ asset('images/gallery/gallery1@2x.webp') }} 2x" type="image/webp">
-                                        <source srcset="{{ asset('images/gallery/gallery1.jpg') }} 1x,
-                                        {{ asset('images/gallery/gallery1@2x.jpg') }} 2x">
-                                        <img src="{{ asset('images/gallery/gallery1.jpg') }}" alt="Интерьер номера">
-                                    </picture>
-                                </li>
-                                <li>
-                                    <picture>
-                                        <source srcset="{{ asset('images/gallery/gallery1.webp') }} 1x,
-                                        {{ asset('images/gallery/gallery1@2x.webp') }} 2x" type="image/webp">
-                                        <source srcset="{{ asset('images/gallery/gallery1.jpg') }} 1x,
-                                        {{ asset('images/gallery/gallery1@2x.jpg') }} 2x">
-                                        <img src="{{ asset('images/gallery/gallery1.jpg') }}" alt="Интерьер номера">
-                                    </picture>
-                                </li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
                     <div class="col-md-5">
                         <div class="apartments__info">
                             <div class="apartments__top">
-                                <h3 class="apartments__title">Одноместный номер</h3>
+                                <h3 class="apartments__title">{{$data->type}}</h3>
                                 <p class="apartments__desc">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, voluptatum!
-                                </p>
-                                <p class="apartments__desc">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat et fugit a rerum mollitia sit.
-                                </p>
-                                <p class="apartments__desc">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint porro et aliquid in mollitia assumenda.
+                                    {!!nl2br($data->description)!!}
                                 </p>
                             </div>
                             <div class="apartments__bottom">
                                 <div class="apartments__sum">
                                     <h5 class="">Суточная цена</h5>
                                     &mdash;
-                                    <h4 class="">100 000 грывень</h4>
+                                    <h4 class="">{{$data->price}} рублей</h4>
                                 </div>
                                 <a href="#" class="button button--primary">Бронировать</a>
                             </div>
@@ -153,21 +67,17 @@
                     <div class="col-md-6">
                         <div class="apartments__facts">
                             <h3 class="apartments__title">Оснащение номера</h3>
-                            <p class="apartments__desc">&mdash;Номер оснащен шикарной двуспальной кроватью</p>
-                            <p class="apartments__desc">&mdash; Большой телевизор</p>
-                            <p class="apartments__desc">&mdash; Письменный стол</p>
-                            <p class="apartments__desc">&mdash; Холодильник</p>
-                            <p class="apartments__desc">&mdash; Ванная комната</p>
-                            <p class="apartments__desc">&mdash; Шкаф для одежды</p>
+                            @foreach(explode(", ", $data->equipment) as $fact)
+                            <p class="apartments__desc">&mdash;&nbsp;{{$fact}}</p>
+                            @endforeach
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="apartments__facts">
                             <h3 class="apartments__title">В стоимость номера включено:</h3>
-                            <p class="apartments__desc">&mdash; Завтрак</p>
-                            <p class="apartments__desc">&mdash; Гладильная комната</p>
-                            <p class="apartments__desc">&mdash; Бесплатный Wi-fi</p>
-                            <p class="apartments__desc">&mdash; Побудка к определенному времени</p>
+                            @foreach(explode(", ", $data->includes) as $fact)
+                            <p class="apartments__desc">&mdash;&nbsp;{{$fact}}</p>
+                            @endforeach
                         </div>
                     </div>
                 </div>

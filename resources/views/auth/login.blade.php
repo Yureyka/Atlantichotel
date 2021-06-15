@@ -18,7 +18,7 @@
             <form class="login__form" method="POST" action="{{ route('login') }}">
                 @csrf
                 <h3>Вход</h3>
-                <input type="email" name="email" value="{{ old('email') }}" placeholder="Логин" required autofocus>
+                <input type="email" name="email" value="{{ old('email') }}" placeholder="Логин" required>
                 <input type="password" name="password" placeholder="Пароль" required>
                 <button class="button button--primary" type="submit">Войти</button>
                 

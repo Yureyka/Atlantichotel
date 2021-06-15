@@ -32,7 +32,8 @@ a {
     }
 }
 
-input, textarea {
+input,
+textarea {
     font-family: $primary-font;
 }
 
@@ -117,6 +118,22 @@ select {
         font-size: 14px;
         padding: 8px 22px;
         border: 1px solid $primary;
+
+        &:hover {
+            background-color: rgba(#000, 0.1);
+        }
+
+        &:active {
+            background-color: rgba(#000, 0.2);
+        }
+    }
+
+    &--tertiary {
+        background-color: transparent;
+        padding: 8px 38px;
+        border: 1px solid $primary;
+        color: $primary;
+        font-size: 16px;
 
         &:hover {
             background-color: rgba(#000, 0.1);
