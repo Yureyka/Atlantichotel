@@ -21,7 +21,7 @@ $(function () {
             loadData: function (filter) {
                 return $.ajax({
                     type: "GET",
-                    url: "/get-reservations",
+                    url: "/get-settlings",
                 });
             },
             // insertItem: function (item) {
@@ -41,7 +41,7 @@ $(function () {
             deleteItem: function (item) {
                 return $.ajax({
                     type: "DELETE",
-                    url: "/delete-reservations/" + item.id,
+                    url: "/delete-settlings/" + item.id,
                     headers: {
                         "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr(
                             "content"
@@ -60,57 +60,19 @@ $(function () {
             },
             {
                 name: "id_client",
-                title: "ID клиента",
+                title: "ID брони",
                 type: "text",
                 width: 160,
                 validate: "required",
             },
             {
-                name: "persons_number",
-                title: "Количество персон",
+                name: "id_room",
+                title: "ID комнаты",
                 type: "number",
                 width: 100,
                 validate: "required",
             },
-            {
-                name: "arrival_date",
-                title: "Дата заселения",
-                type: "text",
-                width: 160,
-                validate: "required",
-            },
-            {
-                name: "departure_date",
-                title: "Дата выезда",
-                type: "text",
-                width: 110,
-                validate: "required",
-            },
-            {
-                name: "transfer",
-                title: "Трансфер",
-                type: "checkbox",
-                width: 80,
-            },
-            {
-                name: "comment",
-                title: "Комментарий",
-                type: "textarea",
-                width: 95,
-            },
-            {
-                name: "price",
-                title: "К оплате",
-                type: "number",
-                width: 95,
-                validate: "required",
-            },
-            {
-                name: "isAccepted",
-                title: "Принято",
-                type: "checkbox",
-                width: 95,
-            },
+            
             { type: "control" },
         ],
     });

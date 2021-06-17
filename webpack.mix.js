@@ -20,4 +20,6 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/apartments.scss', 'public/css')
     .sass('resources/sass/contacts.scss', 'public/css')
     .sass('resources/sass/receipt.scss', 'public/css')
-    .sass('resources/sass/login.scss', 'public/css');
+    .sass('resources/sass/login.scss', 'public/css')
+    .sass('resources/sass/admin-panel.scss', 'public/css')
+    .sass('resources/sass/admin-aside.scss', 'public/css');

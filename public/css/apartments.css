@@ -69,6 +69,7 @@
 }
 .apartments__slider img {
   width: 100px;
+  cursor: pointer;
 }
 .apartments .button {
   display: inline-block;

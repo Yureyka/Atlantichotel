@@ -21,7 +21,7 @@ $(function () {
             loadData: function (filter) {
                 return $.ajax({
                     type: "GET",
-                    url: "/get-reservations",
+                    url: "/get-clients",
                 });
             },
             // insertItem: function (item) {
@@ -41,7 +41,7 @@ $(function () {
             deleteItem: function (item) {
                 return $.ajax({
                     type: "DELETE",
-                    url: "/delete-reservations/" + item.id,
+                    url: "/delete-clients/" + item.id,
                     headers: {
                         "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr(
                             "content"
@@ -59,58 +59,48 @@ $(function () {
                 editing: false,
             },
             {
-                name: "id_client",
-                title: "ID клиента",
+                name: "firstname",
+                title: "Имя",
                 type: "text",
                 width: 160,
                 validate: "required",
             },
             {
-                name: "persons_number",
-                title: "Количество персон",
-                type: "number",
+                name: "middlename",
+                title: "Фамилия",
+                type: "text",
+                width: 160,
+                validate: "required",
+            },
+            {
+                name: "lastname",
+                title: "Отчество",
+                type: "text",
+                width: 160,
+                validate: "required",
+            },
+            {
+                name: "passport",
+                title: "Серия и номер паспорта",
+                type: "text",
                 width: 100,
                 validate: "required",
             },
             {
-                name: "arrival_date",
-                title: "Дата заселения",
+                name: "email",
+                title: "Email",
                 type: "text",
                 width: 160,
                 validate: "required",
             },
             {
-                name: "departure_date",
-                title: "Дата выезда",
+                name: "phone_number",
+                title: "Телефон",
                 type: "text",
-                width: 110,
+                width: 160,
                 validate: "required",
             },
-            {
-                name: "transfer",
-                title: "Трансфер",
-                type: "checkbox",
-                width: 80,
-            },
-            {
-                name: "comment",
-                title: "Комментарий",
-                type: "textarea",
-                width: 95,
-            },
-            {
-                name: "price",
-                title: "К оплате",
-                type: "number",
-                width: 95,
-                validate: "required",
-            },
-            {
-                name: "isAccepted",
-                title: "Принято",
-                type: "checkbox",
-                width: 95,
-            },
+            
             { type: "control" },
         ],
     });

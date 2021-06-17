@@ -22,6 +22,7 @@ class CreateReservationsTable extends Migration
             $table->date('departure_date');
             $table->boolean('transfer');
             $table->text('comment');
+            $table->double('price');
             $table->boolean('isAccepted');
             $table->timestamps();
         });

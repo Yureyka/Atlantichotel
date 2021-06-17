@@ -1,0 +1,50 @@
+@import "variables";
+
+.admin-aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 230px;
+    border-right: 1px solid #ebebeb;
+    
+    background-color: $text-color;
+
+    &__item {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        color: $text-color;
+        padding: 16px 24px;
+        color: #fff;
+        transition: background-color .3s ease-in-out;
+        
+        svg path {
+            transition: fill .3s ease-in-out;
+        }
+
+        &:hover {
+            background-color: $primary;
+            svg path {
+                fill: $text-color;
+            }
+        }
+
+        h3 {
+            margin-left: 26px;
+            font-weight: 400;
+        }
+    }
+
+    &__logo {
+        padding: 10px 24px 24px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        background-color: $text-color;
+
+        img {
+            width: 200px;
+        }
+    }
+}

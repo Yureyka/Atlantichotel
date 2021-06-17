@@ -1,0 +1,41 @@
+.admin-aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 230px;
+  border-right: 1px solid #ebebeb;
+  background-color: #424242;
+}
+.admin-aside__item {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  color: #424242;
+  padding: 16px 24px;
+  color: #fff;
+  transition: background-color 0.3s ease-in-out;
+}
+.admin-aside__item svg path {
+  transition: fill 0.3s ease-in-out;
+}
+.admin-aside__item:hover {
+  background-color: #c7956f;
+}
+.admin-aside__item:hover svg path {
+  fill: #424242;
+}
+.admin-aside__item h3 {
+  margin-left: 26px;
+  font-weight: 400;
+}
+.admin-aside__logo {
+  padding: 10px 24px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: #424242;
+}
+.admin-aside__logo img {
+  width: 200px;
+}

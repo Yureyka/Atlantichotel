@@ -1,0 +1,41 @@
+@import "variables";
+@import "base";
+
+.admin-panel {
+    padding-left: 230px;
+    text-align: center;
+
+    &__title {
+        font-size: 36px;
+        margin: 26px;
+        font-weight: normal;
+    }
+
+    &__content {
+        margin: 0px 30px 30px;
+    }
+
+    .jsgrid-cell {
+
+        input,
+        select {
+            border: 1px solid #e2e2e2;
+            transition: border-color .2s ease-in-out;
+            border-radius: 3px;
+
+            &:focus-visible {
+                outline: none;
+                border: 1px solid $primary;
+            }
+        }
+    }
+
+    .jsgrid-table {
+        color: $text-color;
+    }
+
+    .jsgrid-grid-body {
+        height: auto !important;
+    }
+}
+
