@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Client;
+use App\Models\Reservation;
 use Illuminate\Http\Request;
-use App\Models\RoomType;
 
-class ReservationController extends Controller
+class DetailsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,17 +15,8 @@ class ReservationController extends Controller
      */
     public function index()
     {
-        //
+        
     }
-
-    public function filter(Request $request)
-    {
-        $data = RoomType::when($request->city, function($query, $city) {
-            return $query->where('city', $city);
-        })->with('images')->get();
-        return view('reservation', compact(['data']));
-    }
-
 
     /**
      * Show the form for creating a new resource.
@@ -44,7 +36,34 @@ class ReservationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $client = new Client;
+        $client->firstname = $request->firstname;
+        $client->middlename = $request->middlename;
+        $client->lastname = $request->lastname;
+        $client->passport = $request->passport;
+        $client->email = $request->email;
+        $client->phone_number = $request->phone_number;
+
+        $client->save();
+
+        $reservation = new Reservation;
+        $reservation->id_client = $client->id;
+        $reservation->persons_number = $request->persons_number;
+        $reservation->arrival_date = $request->arrival_date." ".$request->arrival_time;
+        $reservation->departure_date = $request->departure_date." ".$request->departure_time;
+
+        if ($request->has('transfer')) {
+            $reservation->transfer = '1';
+        } else {
+            $reservation->transfer = '0';
+        }
+
+        $reservation->comment = $request->comment;
+        $reservation->price = $request->price;
+
+        $reservation->save();
+
+        return view('receipt', compact(['reservation']));
     }
 
     /**

@@ -25,8 +25,8 @@
                             <img src="{{ asset('images/bed-icon.svg') }}" alt="">
                         </div>
                         <div class="cart__info">
-                            <h6 class="cart__text">
-                                1 одноместный номер, 1 двуместный номер
+                            <h6 class="cart__text rooms">
+                               
                             </h6>
                         </div>
                     </div>
@@ -35,7 +35,7 @@
                             Сумма:
                         </h5>
                         <h4 class="cart__sum">
-                            100000 грывень
+                            
                         </h4>
                     </div>
                 </div>
@@ -44,19 +44,20 @@
                 <h2 class="section__title">Детали бронирования</h2>
             </div>
             <section class="details">
-                <form action="">
+                <form method="POST" action="/receipt">
+                @csrf
                     <h3 class="details__title">Клиент</h3>
                     <h5 class="details__subtitle">Пожалуйста, введите ваше имя, паспортные данные и выберите количество персон</h5>
                     <div class="details__form">
                         <div class="details__inputs">
-                            <input type="text" class="details__input details__input--text" placeholder="Имя">
-                            <input type="text" class="details__input details__input--text" placeholder="Фамилия">
-                            <input type="text" class="details__input details__input--text" placeholder="Отчество">
-                            <input type="text" class="details__input details__input--text" placeholder="Серия и номер паспорта">
+                            <input name="firstname" type="text" class="details__input details__input--text" placeholder="Имя" required>
+                            <input name="middlename" type="text" class="details__input details__input--text" placeholder="Фамилия" required>
+                            <input name="lastname" type="text" class="details__input details__input--text" placeholder="Отчество" required>
+                            <input name="passport" type="text" class="details__input details__input--text" placeholder="Серия и номер паспорта" required>
                         </div>
                         <div class="details__persons">
                             <h5>Человек:</h5>
-                            <select name="" id="">
+                            <select name="persons_number" id="">
                                 <option value="1" selected>1 человек</option>
                                 <option value="2">2 человек</option>
                                 <option value="3">3 человек</option>
@@ -71,16 +72,16 @@
                     <div class="details__form">
                         <div class="details__time">
                             <h3>Заезд</h3>
-                            <input type="date" class="details__input details__input--date">
-                            <input type="time" class="details__input details__input--time" value="12:00">
+                            <input id="arrival_date" name="arrival_date" type="date" class="details__input details__input--date" required>
+                            <input name="arrival_time" type="time" class="details__input details__input--time" value="12:00" required>
                             <h3>Выезд</h3>
-                            <input type="date" class="details__input details__input--date">
-                            <input type="time" class="details__input details__input--time" value="12:00">
+                            <input id="departure_date" name="departure_date" type="date" class="details__input details__input--date" required>
+                            <input name="departure_time" type="time" class="details__input details__input--time" value="12:00" required>
                         </div>
-                        <textarea name="" id="" rows="5" placeholder="Дополнительные комментарии"></textarea>
+                        <textarea name="comment" id="" rows="5" placeholder="Дополнительные комментарии" required></textarea>
 
                         <div class="details__transfer">
-                            <input class="details__checkbox" type="checkbox" id="transfer">
+                            <input name="transfer" class="details__checkbox" type="checkbox" id="transfer">
                             <label for="transfer">Трансфер</label>
                         </div>
                     </div>
@@ -88,11 +89,12 @@
                     <h5 class="details__subtitle">На этот адрес электронной почты будет выслано письмо с подтверждением</h5>
                     <div class="details__form">
                         <div class="details__contacts">
-                            <input type="email" class="details__input details__input--contact" placeholder="Email">
+                            <input name="email" type="email" class="details__input details__input--contact" placeholder="Email" required>
                             <h5 class="details__subtitle">Пожалуйста, введите номер телефона. При необходимости мы свяжемся с Вами для уточнения деталей</h5>
-                            <input type="tel" class="details__input details__input--contact" placeholder="Телефон">
+                            <input name="phone_number" type="tel" class="details__input details__input--contact" placeholder="Телефон" required>
                         </div>
                     </div>
+                    <input id="final_price" name="price" type="text" hidden>
                     <div class="details__send">
                         <button class="button button--primary" type="submit">Отправить</button>
                     </div>
@@ -103,6 +105,8 @@
 
     @include('footer')
     @include('scrollup')
+
+    <script src="{{ asset('js/details.js') }}"></script>
 </body>
 
 </html>

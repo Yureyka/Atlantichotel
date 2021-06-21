@@ -27,11 +27,11 @@
                             <img src="{{ asset('images/cart-icon.svg') }}" alt="">
                         </div>
                         <div class="cart__info">
-                            <h6 class="cart__text">
-                                1 номер
+                            <h6 class="cart__text quantity">
+                                Номеров: 0
                             </h6>
-                            <h6 class="cart__text">
-                                10 мая - 10 мая
+                            <h6 class="cart__text dates">
+                                
                             </h6>
                         </div>
                     </div>
@@ -40,72 +40,22 @@
                             Сумма:
                         </h5>
                         <h4 class="cart__sum">
-                            100000 грывень
+                            0 рублей
                         </h4>
-                        <a href="#" class="button button--primary">Бронировать</a>
+                        <form method="GET" action="/details">
+                            <button type="submit" id="reservation_button" class="button button--primary">Бронировать</button>
+                        </form>
                     </div>
                 </div>
                 <table class="cart__table">
                     <thead>
                         <tr>
                             <th>Название</th>
-                            <th>Количество</th>
                             <th>Общая стоимость</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>
-                                <h4>
-                                    Одноместный номер
-                                </h4>
-                            </td>
-                            <td>
-                                <div class="cart__td-select">
-                                    <select>
-                                        <option value="">1 пчел</option>
-                                        <option value="">2 пчела</option>
-                                        <option value="">3 пчела</option>
-                                    </select>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="cart__td-flex">
-                                    <h4>
-                                        100 000 грывень
-                                    </h4>
-                                    <button class="cart__delete">
-                                        <img src="{{ asset('images/delete.svg') }}" alt="">
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h4>
-                                    Одноместный номер
-                                </h4>
-                            </td>
-                            <td>
-                                <div class="cart__td-select">
-                                    <select>
-                                        <option value="">1 пчел</option>
-                                        <option value="">2 пчела</option>
-                                        <option value="">3 пчела</option>
-                                    </select>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="cart__td-flex">
-                                    <h4>
-                                        100 000 грывень
-                                    </h4>
-                                    <button class="cart__delete">
-                                        <img src="{{ asset('images/delete.svg') }}" alt="">
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
+                        
                     </tbody>
                 </table>
             </div>
@@ -128,14 +78,7 @@
                         </div>
                     </div>
                     <div class="room-card__options">
-                        <select>
-                            <option value="">1 номер</option>
-                            <option value="">2 номера</option>
-                            <option value="">3 номера</option>
-                            <option value="">4 номера</option>
-                            <option value="">5 номеров</option>
-                        </select>
-                        <button class="button button--primary">Выбрать</button>
+                        <button data-type="{{$item->type}}" data-price="{{$item->price}}" class="button button--primary add-row">Выбрать</button>
                         <a class="button button--tertiary" href="/apartments/{{$item->id}}">Смотреть</a>
                     </div>
                 </div>
@@ -146,6 +89,8 @@
 
     @include('footer')
     @include('scrollup')
+
+    <script src="{{ asset('js/reservationTable.js') }}"></script>
 </body>
 
 </html>

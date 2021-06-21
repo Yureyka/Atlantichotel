@@ -106,13 +106,7 @@
                 <div class="row best-rooms__main">
                     <div class="col-md-8">
                         <div class="best-rooms__img">
-                            <picture>
-                                <source srcset="{{ asset('images/rooms/room.webp') }} 1x,
-                                                {{ asset('images/rooms/room@2x.webp') }} 2x" type="image/webp">
-                                <source srcset="{{ asset('images/rooms/room.jpg') }} 1x,
-                                                {{ asset('images/rooms/room@2x.jpg') }} 2x">
-                                <img src="{{ asset('images/rooms/room.jpg') }}" alt="Комфортабельный номер">
-                            </picture>
+                            <img src="{{ asset('images/home/room1_1.jpg') }}" alt="Двухместный номер">
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -125,8 +119,8 @@
                         <div class="best-rooms__price">
                             <div class="price">
                                 <h6 class="price__title">Одноместный номер</h6>
-                                <h5 class="price__cost">5200 руб/сутки</h5>
-                                <button class="button button--secondary">Забронировать</button>
+                                <h5 class="price__cost">3200 руб/сутки</h5>
+                                <a href="{{ route ('reservation') }}" class="button button--secondary">Смотреть</a>
                             </div>
                         </div>
                     </div>
@@ -135,13 +129,7 @@
                     <div class="col-xl-6">
                         <div class="room">
                             <div class="room__img">
-                                <picture>
-                                    <source srcset="{{ asset('images/rooms/room_1.webp') }} 1x,
-                                                {{ asset('images/rooms/room_1@2x.webp') }} 2x" type="image/webp">
-                                    <source srcset="{{ asset('images/rooms/room_1.jpg') }} 1x,
-                                                {{ asset('images/rooms/room_1@2x.jpg') }} 2x">
-                                    <img src="{{ asset('images/rooms/room_1.jpg') }}" alt="Двухместный номер">
-                                </picture>
+                                <img src="{{ asset('images/home/room2_1.jpg') }}" alt="Двухместный номер">
                             </div>
                             <div>
                                 <div class="room__info">
@@ -150,8 +138,8 @@
                                 </div>
                                 <div class="price price--tiny">
                                     <h6 class="price__title">От</h6>
-                                    <h5 class="price__cost">5200 руб/сутки</h5>
-                                    <button class="button button--secondary">Забронировать</button>
+                                    <h5 class="price__cost">5600 руб/сутки</h5>
+                                    <a href="{{ route ('reservation') }}" class="button button--secondary">Смотреть</a>
                                 </div>
                             </div>
                         </div>
@@ -159,23 +147,17 @@
                     <div class="col-xl-6">
                         <div class="room">
                             <div class="room__img">
-                                <picture>
-                                    <source srcset="{{ asset('images/rooms/room_1.webp') }} 1x,
-                                                {{ asset('images/rooms/room_1@2x.webp') }} 2x" type="image/webp">
-                                    <source srcset="{{ asset('images/rooms/room_1.jpg') }} 1x,
-                                                {{ asset('images/rooms/room_1@2x.jpg') }} 2x">
-                                    <img src="{{ asset('images/rooms/room_1.jpg') }}" alt="Двухместный номер">
-                                </picture>
+                                <img src="{{ asset('images/home/room3_1.jpg') }}" alt="Трехместный номер">
                             </div>
                             <div>
                                 <div class="room__info">
-                                    <h3 class="room__title">Двухместный номер</h3>
+                                    <h3 class="room__title">Трехместный номер</h3>
                                     <p>Номер оснащен шикарной двуспальной кроватью. Прекрасное решение для отдыха в поездке. Телевизор, рабочая область (письменный стол), wi-fi.</p>
                                 </div>
                                 <div class="price price--tiny">
                                     <h6 class="price__title">От</h6>
-                                    <h5 class="price__cost">5200 руб/сутки</h5>
-                                    <button class="button button--secondary">Забронировать</button>
+                                    <h5 class="price__cost">8000 руб/сутки</h5>
+                                    <a href="{{ route ('reservation') }}" class="button button--secondary">Смотреть</a>
                                 </div>
                             </div>
                         </div>
@@ -298,12 +280,32 @@
                                     <img src="{{ asset('images/icons/star-icon.svg') }}" alt="">
                                 </div>
                                 <p>
-                                    Вы не представляете, насколько я была счастлива пожить в этом отеле. Меня хорошо кормили, а на ресепшн стояла ваза с конфетками. Тауалет, кстати, тоже кайф. Спасибо!
+                                Сервис ненавязчивый, полотенца мягкие, гигиенический набор в полном объёме (щётка, паста, шампунь, мыло) - на каждого (жили вдвоём с женой). В следующий раз постараемся опять сюда заселиться.
                                 </p>
                             </div>
                             <div class="review__footer">
-                                <h5 class="review__name">Юрий Волобуев</h5>
-                                <p class="review__date">07.06.2021</p>
+                                <h5 class="review__name">Птичка Невеличка</h5>
+                                <p class="review__date">17.06.2021</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="review">
+                            <div class="review__content">
+                                <h3 class="review__title">ХОРОШО</h3>
+                                <div class="stars">
+                                    <img src="{{ asset('images/icons/star-icon.svg') }}" alt="">
+                                    <img src="{{ asset('images/icons/star-icon.svg') }}" alt="">
+                                    <img src="{{ asset('images/icons/star-icon.svg') }}" alt="">
+                                    <img src="{{ asset('images/icons/star-icon.svg') }}" alt="">
+                                </div>
+                                <p>
+                                Сервис 4 из 5. Шведский стол на европейском уровне, что радует. Бассейн маленький, но море в километре от отеля, поэтому не критично. 4 звезды.
+                                </p>
+                            </div>
+                            <div class="review__footer">
+                                <h5 class="review__name">Птичка Невеличка</h5>
+                                <p class="review__date">17.06.2021</p>
                             </div>
                         </article>
                     </div>
@@ -313,39 +315,14 @@
                                 <h3 class="review__title">ОТЛИЧНО</h3>
                                 <div class="stars">
                                     <img src="{{ asset('images/icons/star-icon.svg') }}" alt="">
-                                    <img src="{{ asset('images/icons/star-icon.svg') }}" alt="">
-                                    <img src="{{ asset('images/icons/star-icon.svg') }}" alt="">
-                                    <img src="{{ asset('images/icons/star-icon.svg') }}" alt="">
-                                    <img src="{{ asset('images/icons/star-icon.svg') }}" alt="">
                                 </div>
                                 <p>
-                                    Если не жить, в принципе, отель неплохой.
+                                Отдых в данном отеле не понравился, от слова "совсем"! Бассейн не чистят неделями!!! Персонал врывается в номер без стука. Больше ни ногой сюда! 1 из 5!
                                 </p>
                             </div>
                             <div class="review__footer">
-                                <h5 class="review__name">Юрий Волобуев</h5>
-                                <p class="review__date">07.06.2021</p>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-md-4">
-                        <article class="review">
-                            <div class="review__content">
-                                <h3 class="review__title">ОТЛИЧНО</h3>
-                                <div class="stars">
-                                    <img src="{{ asset('images/icons/star-icon.svg') }}" alt="">
-                                    <img src="{{ asset('images/icons/star-icon.svg') }}" alt="">
-                                    <img src="{{ asset('images/icons/star-icon.svg') }}" alt="">
-                                    <img src="{{ asset('images/icons/star-icon.svg') }}" alt="">
-                                    <img src="{{ asset('images/icons/star-icon.svg') }}" alt="">
-                                </div>
-                                <p>
-                                    Я хотел покончить жизнь самоубийством, выброситься из окна, но оно не открылось, ремонтник сказал, что рама покосилась. Вот это сервис!
-                                </p>
-                            </div>
-                            <div class="review__footer">
-                                <h5 class="review__name">Юрий Волобуев</h5>
-                                <p class="review__date">07.06.2021</p>
+                                <h5 class="review__name">Птичка Невеличка</h5>
+                                <p class="review__date">17.06.2021</p>
                             </div>
                         </article>
                     </div>

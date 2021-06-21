@@ -56,9 +56,9 @@
                                 <div class="apartments__sum">
                                     <h5 class="">Суточная цена</h5>
                                     &mdash;
-                                    <h4 class="">{{$data->price}} рублей</h4>
+                                    <h4 class="sum">{{$data->price}} рублей</h4>
                                 </div>
-                                <a href="#" class="button button--primary">Бронировать</a>
+                                <a href="/reservation" id="apart_reservation" class="button button--primary">Бронировать</a>
                             </div>
                         </div>
                     </div>
@@ -99,6 +99,7 @@
             speed: 400
         });
     </script>
+    <script src="{{ asset('js/apartments.js') }}"></script>
 </body>
 
 </html>

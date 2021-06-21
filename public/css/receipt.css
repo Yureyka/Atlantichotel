@@ -74,8 +74,9 @@
 }
 .receipt__cancel {
   display: flex;
+  justify-content: flex-end;
 }
 .receipt__cancel a {
   display: block;
-  margin-left: auto;
+  margin-left: 20px;
 }

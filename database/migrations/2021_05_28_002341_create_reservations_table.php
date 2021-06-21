@@ -18,12 +18,12 @@ class CreateReservationsTable extends Migration
             $table->unsignedBigInteger('id_client');
             $table->foreign('id_client')->references('id')->on('clients')->onDelete('cascade');
             $table->integer('persons_number');
-            $table->date('arrival_date');
-            $table->date('departure_date');
-            $table->boolean('transfer');
+            $table->timestamp('arrival_date');
+            $table->timestamp('departure_date');
+            $table->boolean('transfer')->default(0);
             $table->text('comment');
             $table->double('price');
-            $table->boolean('isAccepted');
+            $table->boolean('isAccepted')->default(0);
             $table->timestamps();
         });
     }

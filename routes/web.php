@@ -9,6 +9,7 @@ use App\Http\Controllers\AdminSettlingController;
 use App\Http\Controllers\AdminFeedbackController;
 use App\Http\Controllers\AdminReservationController;
 use App\Http\Controllers\AdminRoomsController;
+use App\Http\Controllers\DetailsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,10 +40,6 @@ Route::get('contacts', function () {
     return view('contacts');
 })->name('contacts');
 
-Route::get('receipt', function () {
-    return view('receipt');
-})->name('receipt');
-
 Route::get('admin-reservations', function () {
     return view('admin-reservations');
 })->name('admin-reservations');
@@ -69,7 +66,7 @@ Route::get('admin-rooms', function () {
 
 Route::post('/feedback', [FeedbackController::class, 'store'])->name('feedback');
 
-Route::get('/reservation', [ReservationController::class, 'index'])->name('reservation');
+Route::get('/reservation', [ReservationController::class, 'filter'])->name('reservation');
 
 Route::get('/get-reservations', [AdminReservationController::class, 'index'])->name('get-reservations');
 
@@ -91,9 +88,10 @@ Route::get('/get-rooms', [AdminRoomsController::class, 'index'])->name('get-room
 
 Route::delete('/delete-rooms/{id}', [AdminRoomsController::class, 'destroy'])->name('delete-rooms');
 
+Route::post('/receipt', [DetailsController::class, 'store'])->name('receipt');
+
 Auth::routes([
     'register' => true,
     'reset' => true,
     'verify' => true,
-  ]);
-  
+]);

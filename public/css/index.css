@@ -138,6 +138,7 @@ select:active, select:focus-visible {
   font-size: 14px;
   padding: 8px 22px;
   border: 1px solid #c7956f;
+  text-align: center;
 }
 .button--secondary:hover {
   background-color: rgba(0, 0, 0, 0.1);
