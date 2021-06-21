@@ -73,6 +73,13 @@ $(function () {
                 validate: "required",
             },
             {
+                name: "types.type",
+                title: "Тип",
+                type: "text",
+                width: 100,
+                validate: "required",
+            },
+            {
                 name: "is_occupied",
                 title: "Свободна",
                 type: "checkbox",

@@ -37,7 +37,17 @@ class AdminSettlingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd($request->input());
+        $data = new Settling();
+        $data->fill($request->input());
+
+        $data->save();
+
+        // return response()->json(
+        //     [
+        //         'text' => 'Ваше сообщение было отправлено. Ожидайте письмо на почту'
+        //     ]
+        // );
     }
 
     /**
@@ -82,7 +92,7 @@ class AdminSettlingController extends Controller
      */
     public function destroy($id)
     {
-        Settling::findOrFail($id)->delete(); 
+        Settling::findOrFail($id)->delete();
         return null;
     }
 }

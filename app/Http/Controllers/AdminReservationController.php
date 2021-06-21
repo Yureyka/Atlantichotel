@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Reservation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AdminReservationController extends Controller
 {
@@ -14,11 +15,11 @@ class AdminReservationController extends Controller
      */
     public function index()
     {
-        // $data = new Comment();
-        // $data->fill($request->input());
+        // $data = Reservation::all()->sortBy('id');
 
-        // $data->save();
-        $data = Reservation::all()->sortBy('id');
+        $data = Reservation::with(['clients' => function ($q) {
+            $q->orderBy('id', 'asc');
+        }])->get();
 
         return response()->json($data);
     }

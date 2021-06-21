@@ -84,6 +84,8 @@ Route::get('/get-settlings', [AdminSettlingController::class, 'index'])->name('g
 
 Route::delete('/delete-settlings/{id}', [AdminSettlingController::class, 'destroy'])->name('delete-settlings');
 
+Route::post('/add-settlings', [AdminSettlingController::class, 'store'])->name('add-settlings');
+
 Route::get('/get-rooms', [AdminRoomsController::class, 'index'])->name('get-rooms');
 
 Route::delete('/delete-rooms/{id}', [AdminRoomsController::class, 'destroy'])->name('delete-rooms');
@@ -91,7 +93,7 @@ Route::delete('/delete-rooms/{id}', [AdminRoomsController::class, 'destroy'])->n
 Route::post('/receipt', [DetailsController::class, 'store'])->name('receipt');
 
 Auth::routes([
-    'register' => true,
-    'reset' => true,
-    'verify' => true,
+    'register' => false,
+    'reset' => false,
+    'verify' => false,
 ]);

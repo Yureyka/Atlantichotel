@@ -14,7 +14,8 @@
 
 <body>
     @include('admin-aside')
-    
+
+
     <div class="admin-panel">
         <h1 class="admin-panel__title">Бронирование</h1>
         <div class="admin-panel__content">

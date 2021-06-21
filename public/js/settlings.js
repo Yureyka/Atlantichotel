@@ -24,13 +24,18 @@ $(function () {
                     url: "/get-settlings",
                 });
             },
-            // insertItem: function (item) {
-            //     return $.ajax({
-            //         type: "POST",
-            //         url: "/pages/admin_books/",
-            //         data: item,
-            //     });
-            // },
+            insertItem: function (item) {
+                return $.ajax({
+                    type: "POST",
+                    url: "/add-settlings",
+                    data: item,
+                    headers: {
+                        "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr(
+                            "content"
+                        ),
+                    },
+                });
+            },
             // updateItem: function (item) {
             //     return $.ajax({
             //         type: "PUT",
@@ -59,7 +64,7 @@ $(function () {
                 editing: false,
             },
             {
-                name: "id_client",
+                name: "id_reservation",
                 title: "ID брони",
                 type: "text",
                 width: 160,
@@ -72,7 +77,7 @@ $(function () {
                 width: 100,
                 validate: "required",
             },
-            
+
             { type: "control" },
         ],
     });

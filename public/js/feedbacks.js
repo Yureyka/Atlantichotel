@@ -24,20 +24,6 @@ $(function () {
                     url: "/get-feedbacks",
                 });
             },
-            // insertItem: function (item) {
-            //     return $.ajax({
-            //         type: "POST",
-            //         url: "/pages/admin_books/",
-            //         data: item,
-            //     });
-            // },
-            // updateItem: function (item) {
-            //     return $.ajax({
-            //         type: "PUT",
-            //         url: "/pages/admin_books/",
-            //         data: item,
-            //     });
-            // },
             deleteItem: function (item) {
                 return $.ajax({
                     type: "DELETE",
@@ -55,7 +41,7 @@ $(function () {
                 name: "id",
                 title: "ID",
                 type: "number",
-                width: 60,
+                width: 26,
                 editing: false,
             },
             {
@@ -76,7 +62,7 @@ $(function () {
                 name: "message",
                 title: "Сообщение",
                 type: "textarea",
-                width: 160,
+                width: 180,
                 validate: "required",
             },
             {

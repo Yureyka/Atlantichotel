@@ -14,7 +14,11 @@ class AdminRoomsController extends Controller
      */
     public function index()
     {
-        $data = Room::all()->sortBy('id');
+        // $data = Room::all()->sortBy('id');
+
+        $data = Room::with(['types' => function ($q) {
+            $q->orderBy('id', 'asc');
+        }])->get();
 
         return response()->json($data);
     }

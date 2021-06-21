@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Reservation extends Model
 {
     use HasFactory;
+
+    public function clients()
+    {
+        return $this->hasOne(Client::class, 'id', 'id_client');
+    }
 }
